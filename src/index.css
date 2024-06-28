@@ -1,0 +1,226 @@
+@import url('https://fonts.googleapis.com/css2?family=Playwrite+AU+SA:wght@100..400&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+::-webkit-scrollbar {
+  width: 5px;
+}
+::-webkit-scrollbar-thumb {
+  background-color: #adadad;
+}
+.playwrite-au-sa {
+  font-family: "Playwrite AU SA", cursive;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+body{
+  background-color: #1d2127;
+}
+
+.blockquotes {
+  box-shadow: 0px 0px 20px 10px rgba(0, 0, 0, 0.4);
+}
+.div-panel{
+  overflow: hidden;
+  min-height: 50%;
+  position: relative;
+}
+.agrandado {
+  width: 100% !important;
+  min-height: 100% !important;
+  position: absolute !important;
+  box-shadow: 0px 0px 20px 10px rgba(0, 0, 0, 0.4);
+}
+.svg-360{
+  stroke: none;
+  fill: #f9ffa2;
+}
+.svg-360:hover{
+  fill: #ffee00;
+}
+
+.svg-proyecto, .svg-portada{
+  stroke-dasharray: 1400; 
+  animation: drawsvg 6s ease-out infinite;
+  stroke: #fff;
+}
+@keyframes drawsvg {
+  0% {
+    stroke-dashoffset: 1400;
+  }
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+.animationwater{
+  animation: wather 2s ease-out infinite;
+}
+@keyframes wather {
+  0%,100% {
+    clip-path: polygon(0 43%, 14% 40%, 33% 41%, 54% 51%, 70% 52%, 84% 47%, 99% 42%, 100% 100%, 0% 100%);
+  }
+  50% {
+    clip-path: polygon(0 43%, 13% 47%, 30% 50%, 48% 52%, 67% 46%, 83% 41%, 99% 42%, 100% 100%, 0% 100%);
+  }
+}
+.lines-effect{
+  stroke: #ffffff;
+  fill: #fff;
+  stroke-width: 3px;
+  stroke-dasharray: 1600;
+  stroke-dashoffset: 1600;
+  animation: drawlines 4s ease-out;
+  
+}
+@keyframes drawlines {
+  0% {
+    stroke-dashoffset: 1600;
+    fill: rgba(255, 255, 255, 0);
+  }
+  100% {
+    stroke-dashoffset: 0;
+    fill: rgba(255, 255, 255, 1);
+  }
+}
+.hidden-effect{
+  display: grid;
+  opacity: 0;
+  filter: blur(3px);
+  transform: translateY(100%);
+  transition: all 0.5s;
+}
+.show{
+  opacity: 1;
+  filter: blur(0);
+  transform: translateY(0);
+}
+nav{
+  transition: .4s;
+}
+nav ul li a:not(.active):hover{
+  background-color: #dedfe1;
+  color: #303032;
+}
+.active{
+  background-color: rgb(102, 100, 100);
+  color: rgb(255, 255, 255);
+}
+nav .title{
+  font-size: 1.2em;
+  margin: .5em 1em;
+  color: #303032;
+  font-weight: bold;
+  text-decoration: none;
+  color: #dedfe1;
+  /*
+  */
+}
+
+nav ul{
+  display: flex;
+  padding: 0;
+}
+nav ul li{
+  list-style: none;
+}
+nav ul li a{
+  display: block;
+  text-decoration: none;
+  padding: 0.5rem;
+  margin: 0 0.5rem;
+  border-radius: 0.5rem;
+  color: #dedfe1;
+  /*
+  color: #303032;
+  */
+}
+nav ul li a:not(.active):hover{
+  background-color: #dedfe1;
+  color: #303032;
+}
+
+nav .menu i{
+  color: #dedfe1;
+  font-size: xx-large;
+  padding: .2rem;
+  margin: .1rem;
+  cursor: pointer;
+}
+
+
+nav .menu{
+  display: none;
+  position: absolute;
+  top: 0;
+  right: .5rem;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 2.25rem;
+  height: 2rem;
+}
+nav menu span{
+  height: 0.4rem;
+  width: 100%;
+  background-color: white;
+  border-radius: .2rem;
+}
+@media (max-width: 750px) {
+  .bg-portada{
+    height: calc(100vh - 4.4rem);
+  }
+  nav .menu{
+      display: flex;
+  }
+  nav{
+      flex-direction: column;
+      align-items: start;
+  }
+  nav ul{
+      display: none;
+      flex-direction: column;
+      width: 100%;
+      margin-bottom: .25rem;
+  }
+  nav ul.open{
+    border-bottom: 1px solid rgba(170, 170, 170, 0.5);
+    display: flex;
+  }
+  nav ul li{
+      width: 100%;
+      text-align: center;
+  }
+  nav ul li a{
+      margin: .2rem .5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .bg-portada{
+    height: calc(100vh - 4.4rem);
+  }
+  nav .menu{
+      display: flex;
+  }
+  nav{
+      flex-direction: column;
+      align-items: start;
+  }
+  nav ul{
+      display: none;
+      flex-direction: column;
+      width: 100%;
+      margin-bottom: .25rem;
+  }
+  nav ul.open{
+      display: flex;
+      border-bottom: 1px solid rgba(170, 170, 170, 0.8);
+      
+  }
+  nav ul li{
+      width: 100%;
+      text-align: center;
+  }
+  nav ul li a{
+      margin: .2rem .5rem;
+  }
+}
