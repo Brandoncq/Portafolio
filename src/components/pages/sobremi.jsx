@@ -30,7 +30,7 @@ export const SobreMi = () => {
   }, [location.pathname]);
   return (
     <div className="w-full p-0 justify-center items-center flex flex-col">
-      <div className="w-full p-0 justify-center items-center flex flex-wrap xl:h-screen mt-20">
+      <div className="w-full p-0 justify-center items-center flex flex-wrap xl:h-screen mt-10">
         <div className="md:w-1/3 w-full lg:p-5 justify-center items-center flex flex-col">
           <img
             src="https://images.unsplash.com/photo-1618477247222-acbdb0e159b3?q=80&w=1964&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
@@ -77,7 +77,7 @@ export const SobreMi = () => {
               capacidades específicas que puedo aportar a proyectos.
             </p>
           </div>
-          <div className="mb-6 md:w-1/3 w-full lg:p-5 px-5">
+          <div className="mb-6 md:w-1/3 w-1/2 lg:p-5 px-4">
             <ul className="list-disc list-inside">
               <li className="text-white flex items-center md:justify-between justify-center">
                 JavaScript
@@ -88,7 +88,7 @@ export const SobreMi = () => {
                   width="100"
                   height="100"
                   viewBox="0 0 48 48"
-                  className="hidden-effect"
+                  className="hidden-effect p-1"
                 >
                   <path fill="#ffd600" d="M6,42V6h36v36H6z"></path>
                   <path
@@ -106,7 +106,7 @@ export const SobreMi = () => {
                   width="100"
                   height="100"
                   viewBox="0 0 48 48"
-                  className="hidden-effect"
+                  className="hidden-effect p-1"
                 >
                   <path
                     fill="#E65100"
@@ -135,7 +135,7 @@ export const SobreMi = () => {
                   width="100"
                   height="100"
                   viewBox="0 0 48 48"
-                  className="hidden-effect"
+                  className="hidden-effect p-1"
                 >
                   <path
                     fill="#0277BD"
@@ -164,7 +164,7 @@ export const SobreMi = () => {
                   width="100"
                   height="100"
                   viewBox="0 0 80 80"
-                  className="hidden-effect"
+                  className="hidden-effect p-1"
                 >
                   <path
                     fill="#dcd5f2"
@@ -193,7 +193,7 @@ export const SobreMi = () => {
                   height="100"
                   viewBox="0 0 32 32"
                   xmlns="http://www.w3.org/2000/svg"
-                  className="hidden-effect"
+                  className="hidden-effect p-1"
                 >
                   <title>file_type_sql</title>
                   <path
@@ -219,7 +219,7 @@ export const SobreMi = () => {
               </li>
             </ul>
           </div>
-          <div className="mb-6 md:w-1/3 w-full lg:p-5 px-5">
+          <div className="mb-6 md:w-1/3 w-1/2 lg:p-5 px-4">
             <ul className="list-disc list-inside ml-4 mt-2">
               <li className="text-white flex items-center md:justify-between justify-center">
                 Node.js
@@ -230,7 +230,7 @@ export const SobreMi = () => {
                   width="100"
                   height="100"
                   viewBox="0 0 48 48"
-                  className="hidden-effect"
+                  className="hidden-effect p-1"
                 >
                   <path
                     fill="#21a366"
@@ -251,7 +251,7 @@ export const SobreMi = () => {
                   width="100"
                   height="100"
                   viewBox="0 0 40 40"
-                  className="hidden-effect"
+                  className="hidden-effect p-1"
                 >
                   <path
                     fill="#98ccfd"
@@ -282,7 +282,7 @@ export const SobreMi = () => {
                   width="100"
                   height="100"
                   viewBox="0 0 48 48"
-                  className="hidden-effect"
+                  className="hidden-effect p-1"
                 >
                   <linearGradient
                     id="NRNx2IPDe7PJlJvrxOKgWa_MWiBjkuHeMVq_gr1"
@@ -363,7 +363,7 @@ export const SobreMi = () => {
                   width="100"
                   height="100"
                   viewBox="0 0 48 48"
-                  className="hidden-effect"
+                  className="hidden-effect p-1"
                 >
                   <path
                     fill="#e64a19"
@@ -393,7 +393,7 @@ export const SobreMi = () => {
                   width="100"
                   height="100"
                   viewBox="0 0 48 48"
-                  className="hidden-effect"
+                  className="hidden-effect p-1"
                 >
                   <path
                     fill="#F4511E"
