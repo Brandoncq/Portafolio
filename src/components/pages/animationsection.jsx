@@ -26,20 +26,20 @@ function AnimationSection() {
   };
   return (
     <div
-      className="w-full flex flex-wrap justify-center overflow-hidden h-96"
+      className="w-full flex flex-wrap justify-center overflow-hidden xl:h-96 md:h-72 h-64"
       style={{ backgroundColor: "#1d2127" }}
     >
-      <div className="lg:w-1/2 w-full flex flex-wrap relative">
+      <div className="w-1/2 flex flex-wrap relative">
         <div
           onClick={() => agrandar(div1, "Proyectos")}
           ref={div1}
           className="div-panel z-10 lg:absolute lg:top-0 lg:left-0  w-1/2 flex flex-col justify-end p-2 text-white transition-all duration-500 ease-in-out cursor-pointer"
           style={{ backgroundColor: "#1d2127" }}
         >
-          <h2 className="font-bold lg:text-xl text-xl mb-2 hover:text-yellow-400">
+          <h2 className="font-bold lg:text-xl text-base mb-2 hover:text-yellow-400">
             Proyectos
           </h2>
-          <p className="text-left m-0 w-full p-0 text-xs font-semibold mb-4">
+          <p className="text-left m-0 w-full p-0 text-xs font-light mb-4">
             Proyectos FullStack.
           </p>
         </div>
@@ -49,10 +49,10 @@ function AnimationSection() {
           className="div-panel z-10 lg:absolute lg:top-0 lg:right-0 w-1/2 flex flex-col justify-end p-2 text-yellow-200 blockquotes transition-all duration-500 ease-in-out cursor-pointer"
           style={{ backgroundColor: "#1a1e23" }}
         >
-          <h2 className="font-bold lg:text-xl text-xl mb-2 hover:text-yellow-400">
+          <h2 className="font-bold lg:text-xl text-base mb-2 hover:text-yellow-400">
             Habilidades
           </h2>
-          <p className="text-left m-0 w-full p-0 text-xs font-semibold mb-4">
+          <p className="text-left m-0 w-full p-0 text-xs font-light mb-4">
             Dominio de Frameworks.
           </p>
         </div>
@@ -62,10 +62,10 @@ function AnimationSection() {
           className="div-panel z-10 lg:absolute lg:bottom-0 lg:left-0 w-1/2 flex flex-col justify-end p-2 text-yellow-200 blockquotes transition-all duration-500 ease-in-out cursor-pointer"
           style={{ backgroundColor: "#1a1e23" }}
         >
-          <h2 className="font-bold lg:text-xl text-xl mb-2 hover:text-yellow-400">
+          <h2 className="font-bold lg:text-xl text-base mb-2 hover:text-yellow-400">
             Sobre Mí
           </h2>
-          <p className="text-left m-0 w-full p-0 text-xs font-semibold mb-4">
+          <p className="text-left m-0 w-full p-0 text-xs font-light mb-4">
             Descripcion mia.
           </p>
         </div>
@@ -75,15 +75,15 @@ function AnimationSection() {
           className="div-panel z-10 lg:absolute lg:bottom-0 lg:right-0 w-1/2 flex flex-col justify-end p-2 text-white transition-all duration-500 ease-in-out cursor-pointer"
           style={{ backgroundColor: "#1d2127" }}
         >
-          <h2 className="font-bold lg:text-xl text-xl mb-2 hover:text-yellow-400">
+          <h2 className="font-bold lg:text-xl text-base mb-2 hover:text-yellow-400">
             Contacto
           </h2>
-          <p className="text-left m-0 w-full p-0 text-xs font-semibold mb-4">
+          <p className="text-left m-0 w-full p-0 text-xs font-light lg:mb-4">
             Contacto Redes Sociales.
           </p>
         </div>
       </div>
-      <div className="lg:w-1/2 w-full flex flex-col justify-center items-center h-96 relative">
+      <div className="w-1/2 flex flex-col justify-center items-center  xl:h-96 md:h-72 h-64 relative">
         <div className="w-full flex p-1 flex-col justify-center items-center h-full absolute z-10">
           <svg
             xmlns="http://www.w3.org/2000/svg"

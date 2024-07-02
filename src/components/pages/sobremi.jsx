@@ -30,23 +30,25 @@ export const SobreMi = () => {
   }, [location.pathname]);
   return (
     <div className="w-full p-0 justify-center items-center flex flex-col">
-      <div className="w-full p-0 justify-center items-center flex flex-wrap xl:h-screen">
-        <div className="w-1/3 p-5 justify-center items-center flex flex-col">
+      <div className="w-full p-0 justify-center items-center flex flex-wrap xl:h-screen mt-20">
+        <div className="md:w-1/3 w-full lg:p-5 justify-center items-center flex flex-col">
           <img
             src="https://images.unsplash.com/photo-1618477247222-acbdb0e159b3?q=80&w=1964&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
             alt=""
             className="grayscale w-full rounded-xl"
           />
         </div>
-        <div className="w-2/3 p-5 justify-center items-start flex flex-col">
-          <h1 className="text-white text-6xl font-light text-left hidden-effect">
+        <div className="md:w-2/3 w-full p-5 justify-center items-start flex flex-col">
+          <h1 className="text-white md:text-6xl text-3xl font-light text-left hidden-effect">
             Davis Brandon
           </h1>
-          <h1 className="text-zinc-400 text-6xl font-semibold hidden-effect">
+          <h1 className="text-zinc-400 md:text-6xl text-3xl font-semibold hidden-effect">
             Desarrolador Web
           </h1>
-          <h1 className="text-white text-6xl font-semibold">Full Stack</h1>
-          <p className="text-white text-lg mt-10">
+          <h1 className="text-white md:text-6xl text-3xl font-semibold">
+            Full Stack
+          </h1>
+          <p className="text-white md:text-lg text-sm mt-10">
             Soy un estudiante de séptimo ciclo de la carrera de Ingeniería de
             Informática y Sistemas. Durante mi formación, he desarrollado
             diversos proyectos utilizando tecnologías como SQL, PHP, JavaScript,
@@ -60,12 +62,12 @@ export const SobreMi = () => {
         </div>
       </div>
       <div className="w-full p-0 justify-center flex flex-wrap">
-        <h1 className="text-white text-6xl font-light w-full text-center mb-10 hidden-effect">
+        <h1 className="text-zinc-800 lg:text-6xl text-4xl font-bold w-full text-center lg:mb-10 mb-0 mt-10 hidden-effect bg-slate-300 p-2">
           Habilidades
         </h1>
-        <div className="w-1/2 flex flex-wrap justify-center">
-          <div className="mb-6 w-full flex flex-col items-center px-10 py-4">
-            <h3 className="text-3xl text-white font-medium mt-10 hidden-effect">
+        <div className="lg:w-1/2 w-full flex flex-wrap justify-center">
+          <div className="mb-6 w-full flex flex-col items-center lg:px-10 px-4 py-4">
+            <h3 className="text-3xl text-white font-medium md:mt-10 mt-0 hidden-effect">
               Tecnologías y Herramientas
             </h3>
             <p className="text-white text-md mt-10 hidden-effect">
@@ -75,9 +77,9 @@ export const SobreMi = () => {
               capacidades específicas que puedo aportar a proyectos.
             </p>
           </div>
-          <div className="mb-6 w-1/3 p-5">
+          <div className="mb-6 md:w-1/3 w-full lg:p-5 px-5">
             <ul className="list-disc list-inside">
-              <li className="text-white flex items-center justify-between">
+              <li className="text-white flex items-center md:justify-between justify-center">
                 JavaScript
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -95,7 +97,7 @@ export const SobreMi = () => {
                   ></path>
                 </svg>
               </li>
-              <li className="text-white flex items-center justify-between">
+              <li className="text-white flex items-center md:justify-between justify-center">
                 HTML
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -124,7 +126,7 @@ export const SobreMi = () => {
                   ></path>
                 </svg>
               </li>
-              <li className="text-white flex items-center justify-between">
+              <li className="text-white flex items-center md:justify-between justify-center">
                 CSS
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -153,7 +155,7 @@ export const SobreMi = () => {
                   ></path>
                 </svg>
               </li>
-              <li className="text-white flex items-center justify-between">
+              <li className="text-white flex items-center md:justify-between justify-center">
                 PHP
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -184,7 +186,7 @@ export const SobreMi = () => {
                   </g>
                 </svg>
               </li>
-              <li className="text-white flex items-center justify-between">
+              <li className="text-white flex items-center md:justify-between justify-center">
                 SQL
                 <svg
                   width="100"
@@ -217,9 +219,9 @@ export const SobreMi = () => {
               </li>
             </ul>
           </div>
-          <div className="mb-6 w-1/3 p-5">
+          <div className="mb-6 md:w-1/3 w-full lg:p-5 px-5">
             <ul className="list-disc list-inside ml-4 mt-2">
-              <li className="text-white flex items-center justify-between">
+              <li className="text-white flex items-center md:justify-between justify-center">
                 Node.js
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -240,7 +242,7 @@ export const SobreMi = () => {
                   ></path>
                 </svg>
               </li>
-              <li className="text-white flex items-center justify-between">
+              <li className="text-white flex items-center md:justify-between justify-center">
                 React.js
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -271,7 +273,7 @@ export const SobreMi = () => {
                   </g>
                 </svg>
               </li>
-              <li className="text-white flex items-center justify-between">
+              <li className="text-white flex items-center md:justify-between justify-center">
                 Next.js
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -352,7 +354,7 @@ export const SobreMi = () => {
                   ></polygon>
                 </svg>
               </li>
-              <li className="text-white flex items-center justify-between">
+              <li className="text-white flex items-center md:justify-between justify-center">
                 Figma
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -382,7 +384,7 @@ export const SobreMi = () => {
                   <circle cx="32" cy="24" r="7" fill="#29b6f6"></circle>
                 </svg>
               </li>
-              <li className="text-white flex items-center justify-between">
+              <li className="text-white flex items-center md:justify-between justify-center">
                 Git
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -403,12 +405,12 @@ export const SobreMi = () => {
           </div>
         </div>
         <div
-          className="w-1/2 flex flex-wrap justify-center items-center blockquotes"
+          className="lg:w-1/2 w-full flex flex-wrap justify-center items-center blockquotes"
           style={{ backgroundColor: "#1a1e23" }}
         >
-          <div className="mb-6 w-full flex flex-col items-center px-10 py-4">
+          <div className="mb-6 w-full flex flex-col items-center lg:px-10 px-4 py-4">
             <h3 className="text-3xl text-white font-medium mt-10 hidden-effect">
-              Diseño Responsivo
+              Diseño Responsivo Óptimo
             </h3>
             <p className="text-white text-md mt-10 hidden-effect">
               Muestro ejemplos de diseño responsivo que he implementado. Incluyo
@@ -417,8 +419,8 @@ export const SobreMi = () => {
               experiencia de usuario óptima en cualquier contexto.
             </p>
           </div>
-          <div className="w-full flex flex-wrap p-10">
-            <div className="w-3/5 flex flex-col justify-center items-center p-2">
+          <div className="w-full flex flex-wrap lg:p-10">
+            <div className="lg:w-3/5 w-full flex flex-col justify-center items-center p-2">
               <img
                 src="https://res.cloudinary.com/dmo6ofy2z/image/upload/v1719427753/samples/landscapes/Captura_de_pantalla_2024-06-26_134558_jcmvfo.png"
                 alt=""
@@ -430,7 +432,7 @@ export const SobreMi = () => {
                 className=" bg-white p-1 rounded-lg mb-4"
               />
             </div>
-            <div className="w-1/5 flex flex-col justify-center items-center p-2">
+            <div className="lg:w-1/5 w-1/2 flex flex-col justify-center items-center p-2">
               <img
                 src="
             https://res.cloudinary.com/dmo6ofy2z/image/upload/v1719428080/samples/landscapes/Captura_de_pantalla_2024-06-26_134618_blapuj.png"
@@ -438,7 +440,7 @@ export const SobreMi = () => {
                 className=" bg-white p-px rounded-xl mb-4"
               />
             </div>
-            <div className="w-1/5 flex flex-col justify-center items-center p-2">
+            <div className="lg:w-1/5 w-1/2  flex flex-col justify-center items-center p-2">
               <img
                 src="
             https://res.cloudinary.com/dmo6ofy2z/image/upload/v1719442075/samples/landscapes/Captura_de_pantalla_2024-06-26_173540_ngzxng.png"
@@ -449,10 +451,10 @@ export const SobreMi = () => {
           </div>
         </div>
         <div
-          className="w-1/2 flex flex-wrap blockquotes"
+          className="lg:w-1/2 w-full flex flex-wrap blockquotes"
           style={{ backgroundColor: "#1a1e23" }}
         >
-          <div className="mb-6 w-full flex flex-col items-center px-10 py-4">
+          <div className="mb-6 w-full flex flex-col items-center lg:px-10 px-4 py-4">
             <h3 className="text-3xl text-white font-medium mt-10 hidden-effect">
               Animaciones y Transiciones
             </h3>
@@ -463,24 +465,24 @@ export const SobreMi = () => {
               las interfaces a través del movimiento.
             </p>
           </div>
-          <div className="w-full flex flex-wrap p-10">
-            <div className="w-1/2 p-1 flex justify-center items-center">
-              <div className="w-full flex flex-wrap border-zinc-400 border-4 shadow-xl shadow-slate-700">
+          <div className="w-full flex flex-wrap lg:p-10">
+            <div className="lg:w-1/2 w-full lg:p-1 flex justify-center items-center">
+              <div className="w-full flex flex-wrap border-zinc-400 lg:border-4 border-2 shadow-xl shadow-slate-700">
                 <SvgProyecto></SvgProyecto>
               </div>
             </div>
-            <div className="w-1/2 p-1 flex justify-center items-center">
-              <div className="w-full flex flex-wrap border-zinc-400 border-4 shadow-xl shadow-slate-700">
+            <div className="lg:w-1/2 w-full lg:p-1 flex justify-center items-center">
+              <div className="w-full flex flex-wrap border-zinc-400 lg:border-4 border-2 shadow-xl shadow-slate-700">
                 <SvgCasa></SvgCasa>
               </div>
             </div>
-            <div className="w-full p-1 flex justify-center items-cente mt-4">
-              <div className="w-full flex flex-wrap border-zinc-400 border-4 shadow-xl shadow-slate-700">
+            <div className="w-full lg:p-1 flex justify-center items-cente mt-4">
+              <div className="w-full flex flex-wrap border-zinc-400 lg:border-4 border-2 shadow-xl shadow-slate-700">
                 <AnimationSection></AnimationSection>
               </div>
             </div>
-            <div className="w-full p-1 flex justify-center items-cente mt-4">
-              <div className="w-full flex flex-col justify-center items-center border-zinc-400  border-4 shadow-xl shadow-slate-700 relative">
+            <div className="w-full lg:p-1 flex justify-center items-cente mt-4">
+              <div className="w-full flex flex-col justify-center items-center border-zinc-400  lg:border-4 border-2 shadow-xl shadow-slate-700 relative">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="242"
@@ -515,8 +517,8 @@ export const SobreMi = () => {
             </div>
           </div>
         </div>
-        <div className="w-1/2 flex flex-wrap justify-center">
-          <div className="mb-6 w-full flex flex-col items-center px-10 py-4">
+        <div className="lg:w-1/2 w-full flex flex-wrap justify-center">
+          <div className="mb-6 w-full flex flex-col items-center lg:px-10 px-4 py-4">
             <h3 className="text-3xl text-white font-medium mt-10 hidden-effect">
               Login ,Autenticación y Envio de Formularios
             </h3>
@@ -529,8 +531,8 @@ export const SobreMi = () => {
               segura y eficiente con los usuarios.
             </p>
           </div>
-          <div className="w-full flex flex-wrap justify-center px-10">
-            <div className="w-1/2 flex flex-wrap justify-center p-2">
+          <div className="w-full flex flex-wrap justify-center lg:px-10">
+            <div className="lg:w-1/2 w-full flex flex-wrap justify-center p-2">
               <img
                 src="
           https://res.cloudinary.com/dmo6ofy2z/image/upload/v1719458654/samples/landscapes/imagen_2024-06-26_222403730_cg8phg.png"
@@ -538,7 +540,7 @@ export const SobreMi = () => {
                 className=" bg-white p-1 rounded-xl mb-4"
               />
             </div>
-            <div className="w-1/2 flex flex-wrap justify-center p-2">
+            <div className="lg:w-1/2 w-full flex flex-wrap justify-center p-2">
               <img
                 src="
           https://res.cloudinary.com/dmo6ofy2z/image/upload/v1719458814/samples/landscapes/imagen_2024-06-26_222643896_vcbcih.png"
@@ -560,10 +562,10 @@ export const SobreMi = () => {
             </p>
           </div>
           <div className="w-full flex flex-wrap justify-center">
-            <div className="w-3/5 flex flex-wrap justify-center">
+            <div className="lg:w-2/5 lg:p-0 p-2 w-full flex flex-wrap justify-center">
               <img
                 src="
-          https://res.cloudinary.com/dmo6ofy2z/image/upload/v1719457795/samples/landscapes/Captura_de_pantalla_2024-06-26_215531_gkdmh6.png"
+          https://res.cloudinary.com/dmo6ofy2z/image/upload/v1719950302/samples/landscapes/pixelcut-export_6_wqek4k.png"
                 alt=""
                 className=" bg-white p-1 rounded-xl mb-4"
               />

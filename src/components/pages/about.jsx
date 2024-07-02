@@ -61,7 +61,7 @@ function About() {
                     width="68"
                     height="68"
                     viewBox="0 0 50 50"
-                    className="p-1 cursor-pointer"
+                    className="p-1 cursor-pointer w-16 h-16 md:w-20 md:h-20 lg:w-24 lg:h-24"
                   >
                     <path
                       className="svg-360"
@@ -81,7 +81,7 @@ function About() {
                     width="68"
                     height="68"
                     viewBox="0 0 50 50"
-                    className="p-1 cursor-pointer"
+                    className="p-1 cursor-pointer w-16 h-16 md:w-20 md:h-20 lg:w-24 lg:h-24"
                   >
                     <path
                       className="svg-360"
@@ -101,7 +101,7 @@ function About() {
                     width="68"
                     height="68"
                     viewBox="0 0 50 50"
-                    className="p-1 cursor-pointer"
+                    className="p-1 cursor-pointer w-16 h-16 md:w-20 md:h-20 lg:w-24 lg:h-24"
                   >
                     <path
                       className="svg-360"
@@ -121,7 +121,7 @@ function About() {
                     width="68"
                     height="68"
                     viewBox="0 0 50 50"
-                    className="p-1 cursor-pointer"
+                    className="p-1 cursor-pointer w-16 h-16 md:w-20 md:h-20 lg:w-24 lg:h-24"
                   >
                     <path
                       className="svg-360"
@@ -141,7 +141,7 @@ function About() {
                     width="68"
                     height="68"
                     viewBox="0 0 50 50"
-                    className="p-1 cursor-pointer"
+                    className="p-1 cursor-pointer w-16 h-16 md:w-20 md:h-20 lg:w-24 lg:h-24"
                   >
                     <path
                       className="svg-360"
@@ -155,7 +155,7 @@ function About() {
         </div>
       </div>
       <div className="w-full flex flex-wrap p-0 m-0 justify-center items-center mb-20 lg:h-screen">
-        <div className="w-1/2 flex flex-wrap justify-center lg:pl-20">
+        <div className="lg:w-1/2 w-full flex flex-wrap justify-center lg:pl-20">
           <h1 className="text-white text-4xl font-light w-full text-center mb-10 hidden-effect">
             Tecnologías y Herramientas que Uso
           </h1>
@@ -165,10 +165,10 @@ function About() {
             className="shadow-xl shadow-slate-600 w-full h-auto grayscale"
           />
         </div>
-        <div className="w-1/2 flex flex-wrap justify-center">
-          <div className="mb-6 w-2/3 p-5">
+        <div className="lg:w-1/2 w-full flex flex-wrap justify-center">
+          <div className="mb-6 lg:w-2/3 w-full p-5">
             <ul className="list-disc list-inside flex justify-center items-center">
-              <li className="text-white flex flex-col items-center justify-between font-bold p-3">
+              <li className="text-white flex flex-col items-center justify-between font-semibold p-3">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   x="0px"
@@ -176,7 +176,7 @@ function About() {
                   width="100"
                   height="100"
                   viewBox="0 0 48 48"
-                  className="hidden-effect"
+                  className="hidden-effect w-12 h-12 md:w-20 md:h-20 lg:w-24 lg:h-24"
                 >
                   <path fill="#ffd600" d="M6,42V6h36v36H6z"></path>
                   <path
@@ -186,7 +186,7 @@ function About() {
                 </svg>
                 JavaScript
               </li>
-              <li className="text-white flex flex-col items-center justify-between font-bold p-1">
+              <li className="text-white flex flex-col items-center justify-between font-semibold p-1">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   x="0px"
@@ -194,7 +194,7 @@ function About() {
                   width="100"
                   height="100"
                   viewBox="0 0 48 48"
-                  className="hidden-effect"
+                  className="hidden-effect w-12 h-12 md:w-20 md:h-20 lg:w-24 lg:h-24"
                 >
                   <path
                     fill="#E65100"
@@ -215,7 +215,7 @@ function About() {
                 </svg>
                 HTML
               </li>
-              <li className="text-white flex flex-col items-center justify-between font-bold p-3">
+              <li className="text-white flex flex-col items-center justify-between font-semibold p-3">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   x="0px"
@@ -223,7 +223,7 @@ function About() {
                   width="100"
                   height="100"
                   viewBox="0 0 48 48"
-                  className="hidden-effect"
+                  className="hidden-effect w-12 h-12 md:w-20 md:h-20 lg:w-24 lg:h-24"
                 >
                   <path
                     fill="#0277BD"
@@ -244,7 +244,7 @@ function About() {
                 </svg>
                 CSS
               </li>
-              <li className="text-white flex flex-col items-center justify-between font-bold p-3">
+              <li className="text-white flex flex-col items-center justify-between font-semibold p-3">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   x="0px"
@@ -252,7 +252,7 @@ function About() {
                   width="100"
                   height="100"
                   viewBox="0 0 80 80"
-                  className="hidden-effect"
+                  className="hidden-effect w-12 h-12 md:w-20 md:h-20 lg:w-24 lg:h-24"
                 >
                   <path
                     fill="#dcd5f2"
@@ -275,13 +275,13 @@ function About() {
                 </svg>
                 PHP
               </li>
-              <li className="text-white flex flex-col items-center justify-between font-bold p-3">
+              <li className="text-white flex flex-col items-center justify-between font-semibold p-3">
                 <svg
                   width="100"
                   height="100"
                   viewBox="0 0 32 32"
                   xmlns="http://www.w3.org/2000/svg"
-                  className="hidden-effect"
+                  className="hidden-effect w-12 h-12 md:w-20 md:h-20 lg:w-24 lg:h-24"
                 >
                   <title>file_type_sql</title>
                   <path
@@ -308,9 +308,9 @@ function About() {
               </li>
             </ul>
           </div>
-          <div className="mb-6 w-2/3 p-5">
+          <div className="mb-6 lg:w-2/3 w-full p-5">
             <ul className="list-disc list-inside ml-4 mt-2 flex justify-center itmes-center">
-              <li className="text-white flex flex-col items-center justify-between font-bold p-3">
+              <li className="text-white flex flex-col items-center justify-between font-semibold p-3">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   x="0px"
@@ -318,7 +318,7 @@ function About() {
                   width="100"
                   height="100"
                   viewBox="0 0 48 48"
-                  className="hidden-effect"
+                  className="hidden-effect w-12 h-12 md:w-20 md:h-20 lg:w-24 lg:h-24"
                 >
                   <path
                     fill="#21a366"
@@ -331,7 +331,7 @@ function About() {
                 </svg>
                 Node.js
               </li>
-              <li className="text-white flex flex-col items-center justify-between font-bold p-3">
+              <li className="text-white flex flex-col items-center justify-between font-semibold p-3">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   x="0px"
@@ -339,7 +339,7 @@ function About() {
                   width="100"
                   height="100"
                   viewBox="0 0 40 40"
-                  className="hidden-effect"
+                  className="hidden-effect w-12 h-12 md:w-20 md:h-20 lg:w-24 lg:h-24"
                 >
                   <path
                     fill="#98ccfd"
@@ -362,7 +362,7 @@ function About() {
                 </svg>
                 React.js
               </li>
-              <li className="text-white flex flex-col items-center justify-between font-bold p-3">
+              <li className="text-white flex flex-col items-center justify-between font-semibold p-3">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   x="0px"
@@ -370,7 +370,7 @@ function About() {
                   width="100"
                   height="100"
                   viewBox="0 0 48 48"
-                  className="hidden-effect"
+                  className="hidden-effect w-12 h-12 md:w-20 md:h-20 lg:w-24 lg:h-24"
                 >
                   <linearGradient
                     id="NRNx2IPDe7PJlJvrxOKgWa_MWiBjkuHeMVq_gr1"
@@ -443,7 +443,7 @@ function About() {
                 </svg>
                 Next.js
               </li>
-              <li className="text-white flex flex-col items-center justify-between font-bold p-3">
+              <li className="text-white flex flex-col items-center justify-between font-semibold p-3">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   x="0px"
@@ -451,7 +451,7 @@ function About() {
                   width="100"
                   height="100"
                   viewBox="0 0 48 48"
-                  className="hidden-effect"
+                  className="hidden-effect w-12 h-12 md:w-20 md:h-20 lg:w-24 lg:h-24"
                 >
                   <path
                     fill="#e64a19"
@@ -473,7 +473,7 @@ function About() {
                 </svg>
                 Figma
               </li>
-              <li className="text-white flex flex-col items-center justify-between font-bold p-3">
+              <li className="text-white flex flex-col items-center justify-between font-semibold p-3">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   x="0px"
@@ -481,7 +481,7 @@ function About() {
                   width="100"
                   height="100"
                   viewBox="0 0 48 48"
-                  className="hidden-effect"
+                  className="hidden-effect w-12 h-12 md:w-20 md:h-20 lg:w-24 lg:h-24"
                 >
                   <path
                     fill="#F4511E"
@@ -495,45 +495,10 @@ function About() {
         </div>
       </div>
       <div className="w-full flex flex-wrap p-0 m-0">
-        <div className="w-full flex flex-wrap px-10 mb-5">
+        <div className="w-full flex flex-wrap lg:px-10 mb-5">
           <h1 className="text-white text-6xl font-light w-full text-center mb-10 hidden-effect">
             Proyectos Personales
           </h1>
-          <div className="lg:w-7/12 w-full p-2 lg:order-none order-last">
-            <div className="w-full flex flex-wrap justify-center items-center">
-              <div className="w-full p-1 flex flex-wrap items-center">
-                <div className="w-3/4 p-1 flex flex-col">
-                  <img
-                    src="https://res.cloudinary.com/dmo6ofy2z/image/upload/v1719588650/samples/landscapes/Captura_de_pantalla_2024-06-28_102812_avn2z7.png"
-                    alt=""
-                    className="w-full h-auto pb-1 rounded-lg shadow-lg shadow-slate-800"
-                  />
-                </div>
-                <div className="w-1/4 p-1 flex flex-col">
-                  <img
-                    src="https://res.cloudinary.com/dmo6ofy2z/image/upload/v1719589614/samples/landscapes/Captura_de_pantalla_2024-06-28_104356_otylu1.png"
-                    alt=""
-                    className="w-full h-auto pb-1 rounded-3xl shadow-lg shadow-slate-800"
-                  />
-                </div>
-                <div className="w-1/2 p-1 flex flex-col">
-                  <img
-                    src="https://res.cloudinary.com/dmo6ofy2z/image/upload/v1719588650/samples/landscapes/Captura_de_pantalla_2024-06-28_102847_gtdxli.png"
-                    alt=""
-                    className="w-full h-auto rounded-lg shadow-lg shadow-slate-800"
-                  />
-                </div>
-                <div className="w-1/2 p-1 flex flex-col">
-                  <img
-                    src="https://res.cloudinary.com/dmo6ofy2z/image/upload/v1719589342/samples/landscapes/imagen_2024-06-28_104211302_rmu3cj.png"
-                    alt=""
-                    className="w-full h-auto rounded-lg shadow-lg shadow-slate-800"
-                  />
-                </div>
-              </div>
-              <div className="w-4/12 p-1"></div>
-            </div>
-          </div>
           <div className="lg:w-5/12 w-full flex flex-col justify-center items-center p-5">
             <h2 className="font-medium lg:text-5xl text-xl m-0 text-yellow-200 my-4 hidden-effect">
               Herramienta de Estimación de Tiempos CPM - PERT
@@ -563,8 +528,97 @@ function About() {
               </a>
             </p>
           </div>
+          <div className="lg:w-7/12 w-full p-2">
+            <div className="w-full flex flex-wrap justify-center items-center">
+              <div className="w-full p-1 flex flex-wrap items-center">
+                <div className="lg:w-3/4 w-full p-1 flex flex-col">
+                  <img
+                    src="https://res.cloudinary.com/dmo6ofy2z/image/upload/v1719588650/samples/landscapes/Captura_de_pantalla_2024-06-28_102812_avn2z7.png"
+                    alt=""
+                    className="w-full h-auto pb-1 rounded-lg shadow-lg shadow-slate-800"
+                  />
+                </div>
+                <div className="lg:w-1/4 w-full p-1 flex flex-col">
+                  <img
+                    src="https://res.cloudinary.com/dmo6ofy2z/image/upload/v1719589614/samples/landscapes/Captura_de_pantalla_2024-06-28_104356_otylu1.png"
+                    alt=""
+                    className="w-full h-auto pb-1 rounded-3xl shadow-lg shadow-slate-800"
+                  />
+                </div>
+                <div className="lg:w-1/2 w-full p-1 flex flex-col">
+                  <img
+                    src="https://res.cloudinary.com/dmo6ofy2z/image/upload/v1719588650/samples/landscapes/Captura_de_pantalla_2024-06-28_102847_gtdxli.png"
+                    alt=""
+                    className="w-full h-auto rounded-lg shadow-lg shadow-slate-800"
+                  />
+                </div>
+                <div className="lg:w-1/2 w-full p-1 flex flex-col">
+                  <img
+                    src="https://res.cloudinary.com/dmo6ofy2z/image/upload/v1719589342/samples/landscapes/imagen_2024-06-28_104211302_rmu3cj.png"
+                    alt=""
+                    className="w-full h-auto rounded-lg shadow-lg shadow-slate-800"
+                  />
+                </div>
+              </div>
+              <div className="w-4/12 p-1"></div>
+            </div>
+          </div>
         </div>
-        <div className="w-full flex flex-wrap px-10 mt-5">
+        <div className="w-full flex flex-wrap lg:px-10 mb-5">
+          <div className="lg:w-7/12 w-full p-2 lg:order-none order-last">
+            <div className="w-full flex flex-wrap justify-center items-center">
+              <div className="w-full p-1 flex flex-wrap items-center">
+                <div className="lg:w-3/4 w-full p-1 flex flex-col">
+                  <img
+                    src="https://res.cloudinary.com/dmo6ofy2z/image/upload/v1719949594/samples/landscapes/pixelcut-export_5_w1zqfn.png"
+                    alt=""
+                    className="w-full h-auto pb-1 rounded-lg shadow-lg shadow-slate-800"
+                  />
+                </div>
+                <div className="lg:w-1/4 w-full p-1 flex flex-col">
+                  <img
+                    src="https://res.cloudinary.com/dmo6ofy2z/image/upload/v1719948945/samples/landscapes/pixelcut-export_4_wmxuvb.png"
+                    alt=""
+                    className="w-full h-auto pb-1 rounded-3xl shadow-lg shadow-slate-800"
+                  />
+                </div>
+                <div className="lg:w-1/2 w-full p-1 flex flex-col">
+                  <img
+                    src="https://res.cloudinary.com/dmo6ofy2z/image/upload/v1719948970/samples/landscapes/Captura_de_pantalla_2024-07-02_123630_supubg.png"
+                    alt=""
+                    className="w-full h-auto rounded-lg shadow-lg shadow-slate-800"
+                  />
+                </div>
+                <div className="lg:w-1/2 w-full p-1 flex flex-col">
+                  <img
+                    src="https://res.cloudinary.com/dmo6ofy2z/image/upload/v1719948946/samples/landscapes/pixelcut-export_3_ramsg1.png"
+                    alt=""
+                    className="w-full h-auto rounded-lg shadow-lg shadow-slate-800"
+                  />
+                </div>
+              </div>
+              <div className="w-4/12 p-1"></div>
+            </div>
+          </div>
+          <div className="lg:w-5/12 w-full flex flex-col justify-center items-center p-5">
+            <h2 className="font-medium lg:text-5xl text-xl m-0 text-yellow-200 my-4 hidden-effect">
+              Digital Food Marketplace
+            </h2>
+            <p className="font-base lg:text-sm text-xs m-0 text-white mt-2">
+              Es una plataforma web diseñada para la venta y distribución de una
+              amplia variedad de productos alimenticios. Los usuarios pueden
+              explorar un catálogo diverso de comidas, desde platos preparados
+              hasta ingredientes frescos, con descripciones detalladas y
+              atractivas imágenes. La plataforma integra pasarelas de pago
+              PayPal y Stripe, asegurando transacciones rápidas y seguras. Con
+              un diseño responsive y una experiencia de usuario intuitiva,
+              garantiza una navegación fluida en cualquier dispositivo. La
+              seguridad de los datos está priorizada mediante encriptación y
+              protocolos avanzados.
+            </p>
+          </div>
+        </div>
+        <div className="w-full flex flex-wrap lg:px-10 mt-5">
           <div className="lg:w-5/12 w-full flex flex-col justify-center items-center p-5">
             <h2 className="font-medium lg:text-5xl text-xl m-0 text-yellow-200 my-4 hidden-effect">
               Gestor de Galerías de Proyectos
@@ -588,28 +642,28 @@ function About() {
           <div className="lg:w-7/12 w-full p-2">
             <div className="w-full flex flex-wrap justify-center items-center">
               <div className="w-full p-1 flex flex-wrap items-center">
-                <div className="w-3/4 p-1 flex flex-col">
+                <div className="lg:w-3/4 w-full p-1 flex flex-col">
                   <img
                     src="https://res.cloudinary.com/dmo6ofy2z/image/upload/v1719585389/samples/landscapes/pixelcut-export_12_gvtyzf.png"
                     alt=""
                     className="w-full h-auto pb-1 rounded-lg shadow-lg shadow-slate-800"
                   />
                 </div>
-                <div className="w-1/4 p-1 flex flex-col">
+                <div className="lg:w-1/4 w-full p-1 flex flex-col">
                   <img
                     src="https://res.cloudinary.com/dmo6ofy2z/image/upload/v1719585389/samples/landscapes/pixelcut-export_11_yamfxn.png"
                     alt=""
                     className="w-full h-auto pb-1 rounded-xl shadow-lg shadow-slate-800"
                   />
                 </div>
-                <div className="w-1/2 p-1 flex flex-col">
+                <div className="lg:w-1/2 w-full p-1 flex flex-col">
                   <img
                     src="https://res.cloudinary.com/dmo6ofy2z/image/upload/v1719586109/samples/landscapes/Captura_de_pantalla_2024-06-28_092811_cyqmjp.png"
                     alt=""
                     className="w-full h-auto rounded-lg shadow-lg shadow-slate-800"
                   />
                 </div>
-                <div className="w-1/2 p-1 flex flex-col">
+                <div className="lg:w-1/2 w-full p-1 flex flex-col">
                   <img
                     src="https://res.cloudinary.com/dmo6ofy2z/image/upload/v1719586475/samples/landscapes/Captura_de_pantalla_2024-06-28_095400_bl9dvl.png"
                     alt=""
@@ -617,7 +671,6 @@ function About() {
                   />
                 </div>
               </div>
-              <div className="w-4/12 p-1"></div>
             </div>
           </div>
         </div>
