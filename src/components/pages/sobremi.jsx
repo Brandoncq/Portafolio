@@ -79,7 +79,7 @@ export const SobreMi = () => {
           </div>
           <div className="mb-6 md:w-1/3 w-1/2 lg:p-5 px-4">
             <ul className="list-disc list-inside">
-              <li className="text-white flex items-center md:justify-between justify-center">
+              <li className="text-white flex items-center justify-between">
                 JavaScript
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -97,7 +97,7 @@ export const SobreMi = () => {
                   ></path>
                 </svg>
               </li>
-              <li className="text-white flex items-center md:justify-between justify-center">
+              <li className="text-white flex items-center justify-between">
                 HTML
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -126,7 +126,7 @@ export const SobreMi = () => {
                   ></path>
                 </svg>
               </li>
-              <li className="text-white flex items-center md:justify-between justify-center">
+              <li className="text-white flex items-center justify-between">
                 CSS
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -155,7 +155,7 @@ export const SobreMi = () => {
                   ></path>
                 </svg>
               </li>
-              <li className="text-white flex items-center md:justify-between justify-center">
+              <li className="text-white flex items-center justify-between">
                 PHP
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -186,7 +186,7 @@ export const SobreMi = () => {
                   </g>
                 </svg>
               </li>
-              <li className="text-white flex items-center md:justify-between justify-center">
+              <li className="text-white flex items-center justify-between">
                 SQL
                 <svg
                   width="100"
@@ -221,7 +221,7 @@ export const SobreMi = () => {
           </div>
           <div className="mb-6 md:w-1/3 w-1/2 lg:p-5 px-4">
             <ul className="list-disc list-inside ml-4 mt-2">
-              <li className="text-white flex items-center md:justify-between justify-center">
+              <li className="text-white flex items-center justify-between">
                 Node.js
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -242,7 +242,7 @@ export const SobreMi = () => {
                   ></path>
                 </svg>
               </li>
-              <li className="text-white flex items-center md:justify-between justify-center">
+              <li className="text-white flex items-center justify-between">
                 React.js
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -273,7 +273,7 @@ export const SobreMi = () => {
                   </g>
                 </svg>
               </li>
-              <li className="text-white flex items-center md:justify-between justify-center">
+              <li className="text-white flex items-center justify-between">
                 Next.js
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -354,7 +354,7 @@ export const SobreMi = () => {
                   ></polygon>
                 </svg>
               </li>
-              <li className="text-white flex items-center md:justify-between justify-center">
+              <li className="text-white flex items-center justify-between">
                 Figma
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -384,7 +384,7 @@ export const SobreMi = () => {
                   <circle cx="32" cy="24" r="7" fill="#29b6f6"></circle>
                 </svg>
               </li>
-              <li className="text-white flex items-center md:justify-between justify-center">
+              <li className="text-white flex items-center justify-between">
                 Git
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
