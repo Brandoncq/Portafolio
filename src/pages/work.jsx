@@ -1,12 +1,28 @@
 import { useEffect, useRef, useState } from "react";
 import { useLocation, NavLink } from "react-router-dom";
-
+import getInfo from "./../components/data";
 export const Work = () => {
   const [isAtBottom, setIsAtBottom] = useState(false);
   const estimacionTiemposRef = useRef(null);
   const gestorProyectosRef = useRef(null);
   const alquilerDisfracesRef = useRef(null);
   const tiendafoodRef = useRef(null);
+  const [activeIndex, setActiveIndex] = useState(0);
+  const [showPopover, setShowPopover] = useState(false);
+  const [srcmodal, setSrcmodal] = useState({});
+  const popoverRef = useRef(null);
+  const [slides, setData] = useState(null);
+  const handleImageClick = (proyecto) => {
+    setShowPopover(true);
+    console.log(slides);
+    console.log(proyecto);
+    console.log(slides[proyecto]);
+    setSrcmodal(slides[proyecto] || []);
+    console.log(srcmodal);
+  };
+  const handleClickOutside = () => {
+    setShowPopover(false);
+  };
   const scrollToSection = (ref) => {
     ref.current.scrollIntoView({ behavior: "smooth" });
   };
@@ -17,6 +33,16 @@ export const Work = () => {
   };
 
   useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const data = await getInfo();
+        setData(data); // Actualiza el estado con los datos
+      } catch (error) {
+        console.error("Error fetching data:", error);
+      }
+    };
+
+    fetchData();
     window.addEventListener("scroll", checkScrollPosition);
     return () => {
       window.removeEventListener("scroll", checkScrollPosition);
@@ -52,7 +78,26 @@ export const Work = () => {
       behavior: "smooth",
     });
   };
+  const prevSlide = () => {
+    console.log(srcmodal.length);
+    setActiveIndex((prevIndex) =>
+      prevIndex === 0 ? srcmodal.length - 1 : prevIndex - 1
+    );
+    console.log(activeIndex);
+  };
 
+  const nextSlide = () => {
+    console.log(srcmodal.length);
+    setActiveIndex((prevIndex) =>
+      prevIndex === srcmodal.length - 1 ? 0 : prevIndex + 1
+    );
+    console.log(activeIndex);
+  };
+  const goToSlide = (index) => {
+    console.log(srcmodal.length);
+    setActiveIndex(index);
+    console.log(activeIndex);
+  };
   return (
     <div className="m-0 p-0 w-full">
       <section className="m-0 p-0 w-full h-lvh flex items-center bg-white relative">
@@ -117,26 +162,123 @@ export const Work = () => {
           </div>
         </div>
       </section>
+      {showPopover && (
+        <div
+          id="default-carousel"
+          className="fixed inset-0 flex items-center justify-center w-full h-full bg-black bg-opacity-60 z-50"
+          data-carousel="slide"
+          ref={popoverRef}
+        >
+          <div
+            className="absolute top-0 left-0 m-4 text-3xl text-white z-40 font-normal cursor-pointer rounded-full hover:bg-zinc-400 p-3"
+            onClick={handleClickOutside}
+          >
+            <h3>X</h3>
+          </div>
+          <div className="relative h-full w-full overflow-hidden rounded-lg">
+            {srcmodal.map((item, index) => (
+              <div
+                key={index}
+                className={`duration-700 ease-in-out absolute inset-0 transition-opacity ${
+                  index === activeIndex ? "opacity-100" : "opacity-0"
+                }`}
+                data-carousel-item
+              >
+                <img
+                  src={item}
+                  className="absolute block w-auto h-full object-cover -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 lg:p-12"
+                  alt="..."
+                />
+              </div>
+            ))}
+          </div>
+          <div className="absolute z-30 flex -translate-x-1/2 bottom-5 left-1/2 space-x-3 rtl:space-x-reverse">
+            {srcmodal.map((item, index) => (
+              <button
+                key={index}
+                type="button"
+                className={`w-3 h-3 rounded-full ${
+                  index === activeIndex ? "bg-blue-500" : "bg-gray-300"
+                }`}
+                aria-current={index === activeIndex}
+                aria-label={`Slide ${index + 1}`}
+                data-carousel-slide-to={index}
+                onClick={() => goToSlide(index)}
+              ></button>
+            ))}
+          </div>
+          <button
+            type="button"
+            className="absolute top-0 start-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
+            data-carousel-prev
+            onClick={prevSlide}
+          >
+            <span className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+              <svg
+                className="w-4 h-4 text-white dark:text-gray-800 rtl:rotate-180"
+                aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 6 10"
+              >
+                <path
+                  stroke="currentColor"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
+                  d="M5 1 1 5l4 4"
+                />
+              </svg>
+              <span className="sr-only">Previous</span>
+            </span>
+          </button>
+          <button
+            type="button"
+            className="absolute top-0 end-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
+            data-carousel-next
+            onClick={nextSlide}
+          >
+            <span className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+              <svg
+                className="w-4 h-4 text-white dark:text-gray-800 rtl:rotate-180"
+                aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 6 10"
+              >
+                <path
+                  stroke="currentColor"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
+                  d="m1 9 4-4-4-4"
+                />
+              </svg>
+              <span className="sr-only">Next</span>
+            </span>
+          </button>
+        </div>
+      )}
       <div className="w-full flex flex-col relative">
         {!isAtBottom && (
-          <div className="w-full h-full flex items-center lg:h-lvh fixed top-0 p-10">
+          <div className="w-full h-full flex items-center lg:h-lvh fixed top-0 lg:p-10 p-2">
             <div className="w-full h-full border border-zinc-500 flex items-center"></div>
             <NavLink to={"/"} onClick={handleScrollToTop}>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 x="0px"
                 y="0px"
-                width="55"
-                height="55"
+                width="60"
+                height="60"
                 viewBox="0 0 50 50"
-                className="w-4 h-4 lg:w-16 lg:h-16 absolute top-0 right-0 bg-white cursor-pointer lg:m-4 m-0 p-4 fill-zinc-500 border-2 border-zinc-400 rounded-lg hover:bg-zinc-600 hover:fill-white"
+                className="w-12 h-12 lg:w-16 lg:h-16 absolute top-0 right-0 bg-white cursor-pointer lg:m-4 m-1 lg:p-4 p-3 fill-zinc-500 border-2 border-zinc-400 rounded-lg hover:bg-zinc-400 hover:fill-white"
               >
                 <path d="M 0 9 L 0 11 L 50 11 L 50 9 Z M 0 24 L 0 26 L 50 26 L 50 24 Z M 0 39 L 0 41 L 50 41 L 50 39 Z"></path>
               </svg>
             </NavLink>
             <button
               onClick={handleScrollToTop}
-              className="absolute bottom-0 right-0 bg-white cursor-pointer lg:m-4 m-0 p-4 rounded-lg border border-zinc-400 text-xl text-zinc-500 hover:bg-zinc-600 hover:text-white"
+              className="absolute bottom-0 right-0 bg-white cursor-pointer lg:m-4 m-1 lg:p-4 p-3 rounded-lg border border-zinc-400 text-xl text-zinc-500 hover:bg-zinc-600 hover:text-white"
             >
               ᐱ
             </button>
@@ -262,8 +404,9 @@ export const Work = () => {
                 </div>
                 <button
                   className="py-2 px-20 bg-gray-900 text-white hover:bg-zinc-500 mt-6 rounded-xl cursor-pointer z-10"
-                  to="/SobreMi"
-                  onClick={handleScrollToTop}
+                  onClick={() => {
+                    handleImageClick("estimacion");
+                  }}
                 >
                   Ver Mas
                 </button>
@@ -484,7 +627,9 @@ export const Work = () => {
                 <button
                   className="py-2 px-20 bg-gray-900 text-white hover:bg-zinc-500 mt-6 rounded-xl cursor-pointer z-10"
                   to="/SobreMi"
-                  onClick={handleScrollToTop}
+                  onClick={() => {
+                    handleImageClick("tienda");
+                  }}
                 >
                   Ver Mas
                 </button>
@@ -706,7 +851,9 @@ export const Work = () => {
                 <button
                   className="py-2 px-20 bg-gray-900 text-white hover:bg-zinc-500 mt-6 rounded-xl cursor-pointer z-10"
                   to="/SobreMi"
-                  onClick={handleScrollToTop}
+                  onClick={() => {
+                    handleImageClick("gestor");
+                  }}
                 >
                   Ver Mas
                 </button>
@@ -859,7 +1006,9 @@ export const Work = () => {
                 <button
                   className="py-2 px-20 bg-gray-900 text-white hover:bg-zinc-500 mt-6 rounded-xl cursor-pointer z-10"
                   to="/SobreMi"
-                  onClick={handleScrollToTop}
+                  onClick={() => {
+                    handleImageClick("alquiler");
+                  }}
                 >
                   Ver Mas
                 </button>

@@ -37,7 +37,7 @@ export const Footer = () => {
                 </li>
                 <li className="mb-4">
                   <NavLink to="/Proyectos" className="hover:underline">
-                    Nosotros
+                    Proyectos
                   </NavLink>
                 </li>
               </ul>

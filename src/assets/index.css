@@ -15,6 +15,19 @@ section{
 ::-webkit-scrollbar-thumb {
   background-color: #adadad;
 }
+input:-webkit-autofill,
+textarea:-webkit-autofill{
+  border: none;
+  border-bottom: 2px solid rgb(75 85 99);
+  -webkit-text-fill-color: white;
+  -webkit-box-shadow: 0 0 0px 100px transparent inset;
+  transition: background-color 5000s ease-in-out 0s;
+  caret-color: white;
+}
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill:focus {
+  border-bottom: 2px solid rgb(37 99 235) !important; 
+}
 .effect-opacity{
   animation: opacidad .4s ease-out ;
 }
