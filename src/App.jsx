@@ -1,16 +1,13 @@
 import { Route, Routes, useLocation } from "react-router-dom";
 import { Navbar } from "./components/nav";
+import { Footer } from "./components/Foot";
 //import { Work, Contact,ProjectDetails, About } from './components/pages';
 import { Load } from "./load.jsx";
 import { useState, useEffect } from "react";
 import { lazy, Suspense } from "react";
-const About = lazy(() => import("./components/pages/about.jsx"));
-const Work = lazy(() => import("./components/pages/work.jsx"));
-const SobreMi = lazy(() => import("./components/pages/sobremi.jsx"));
-const ProjectDetails = lazy(() =>
-  import("./components/pages/projectdetails.jsx")
-);
-const Contact = lazy(() => import("./components/pages/contact.jsx"));
+const About = lazy(() => import("./pages/about.jsx"));
+const Work = lazy(() => import("./pages/work.jsx"));
+const SobreMi = lazy(() => import("./pages/sobremi.jsx"));
 
 function App() {
   useEffect(() => {
@@ -18,16 +15,15 @@ function App() {
   }, []);
   return (
     <div className="App">
-      <Navbar></Navbar>
+      {/*<Navbar></Navbar>*/}
       <Suspense delayMs={5000} fallback={<Load />}>
         <Routes>
           <Route index element={<About />} />
           <Route path="/SobreMi" element={<SobreMi />} />
           <Route path="/Proyectos" element={<Work />} />
-          <Route path="/work/:project" element={<ProjectDetails />} />
-          <Route path="/Contacto" element={<Contact />} />
         </Routes>
       </Suspense>
+      <Footer></Footer>
     </div>
   );
 }

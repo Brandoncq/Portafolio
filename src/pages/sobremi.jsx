@@ -1,6 +1,10 @@
+import SvgProyecto from "../components/svgproyecto";
+import SvgCasa from "../components/svgcasa";
+import AnimationSection from "../components/animationsection";
 import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
-function About() {
+
+export const SobreMi = () => {
   const location = useLocation();
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -15,7 +19,8 @@ function About() {
         });
       },
       { threshold: 0 }
-    );
+    ); // Mueve las opciones del IntersectionObserver aquí
+
     var hidden = document.querySelectorAll(".hidden-effect");
     hidden.forEach((el) => observer.observe(el));
     return () => {
@@ -23,151 +28,58 @@ function About() {
     };
   }, [location.pathname]);
   return (
-    <div className="w-full flex flex-col justify-center items-center">
-      <div className="w-full flex flex-wrap h-screen r">
-        <div className="w-full flex p-1 flex-col justify-center items-center h-full z-10">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="242"
-            height="325"
-            fill="none"
-            viewBox="0 0 242 325"
-            className="w-1/12 h-auto"
-          >
-            <path
-              className="lines-effect"
-              fill="#D9D9D9"
-              stroke="#000"
-              d="M10 157V10h94.667a99.998 99.998 0 0127.146 3.755L138 15.5l5.6 1.96a85.936 85.936 0 0144.298 35.275l2.925 4.64a99.145 99.145 0 0113.682 35.151l.178.98a100.02 100.02 0 01.736 31.104l-.14 1.049A50.046 50.046 0 01202.385 137l-2.885 7.5-12 23-10.399 11.16a92.856 92.856 0 01-57.284 28.938L112 208.5H49.5V277l81.341-.919a55.398 55.398 0 0037.104-14.832l4.752-4.42a54.833 54.833 0 0011.14-14.546l.18-.341a52.908 52.908 0 004.276-38.515l-.08-.294a27.32 27.32 0 00-1.933-5.073L183 191.5l9.887-11.932a100.046 100.046 0 008.377-11.741L210 153.5l1.75 2.052A86.063 86.063 0 01229.5 189.5l1.991 10.809a91.172 91.172 0 01-3.723 46.963l-.281.794a96.037 96.037 0 01-7.48 16.171L215.5 272l-2.939 3.762a100.018 100.018 0 01-22.383 21l-4.482 3.063A92.78 92.78 0 01133.354 316H10V170.5h95l7.513-1.326a61.91 61.91 0 0018.017-6.152l.429-.226a59.572 59.572 0 0018.831-15.533l.222-.278a57.958 57.958 0 0011.034-22.404l.2-.817a54.61 54.61 0 00-11.45-48.403l-2.507-2.946A65.112 65.112 0 0097.697 49.5H49.5V117H138l14.5 1.5-2.394 7.181a41.65 41.65 0 01-17.442 22.154l-1.817 1.136A52.836 52.836 0 01102.85 157H10z"
-            ></path>
-          </svg>
-          <h1 className="text-white font-light xl:text-3xl lg:text-xl text-xl m-0 lg:mt-4 mt-2 playwrite-au-sa">
-            Davis Brandon
-          </h1>
-          <h2 className="text-white font-light xl:text-lg lg:text-lg text-sm m-0 mt-2 italic">
-            Desarrollador Web Full Stack
-          </h2>
-          <div className="w-full flex justify-center items-center">
-            <div className="w-1/3 flex p-1 justify-center items-center">
-              <div className="xl:w-1/5 lg:w-1/3 p-1 m-0 flex flex-col justify-center items-center">
-                <a
-                  href="https://www.instagram.com/davisbrandon036/"
-                  target="blanck"
-                  className="flex flex-col justify-center items-center"
-                >
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="68"
-                    height="68"
-                    viewBox="0 0 50 50"
-                    className="p-1 cursor-pointer w-16 h-16 md:w-20 md:h-20 lg:w-24 lg:h-24"
-                  >
-                    <path
-                      className="svg-360"
-                      d="M 16 3 C 8.83 3 3 8.83 3 16 L 3 34 C 3 41.17 8.83 47 16 47 L 34 47 C 41.17 47 47 41.17 47 34 L 47 16 C 47 8.83 41.17 3 34 3 L 16 3 z M 37 11 C 38.1 11 39 11.9 39 13 C 39 14.1 38.1 15 37 15 C 35.9 15 35 14.1 35 13 C 35 11.9 35.9 11 37 11 z M 25 14 C 31.07 14 36 18.93 36 25 C 36 31.07 31.07 36 25 36 C 18.93 36 14 31.07 14 25 C 14 18.93 18.93 14 25 14 z M 25 16 C 20.04 16 16 20.04 16 25 C 16 29.96 20.04 34 25 34 C 29.96 34 34 29.96 34 25 C 34 20.04 29.96 16 25 16 z"
-                    ></path>
-                  </svg>
-                </a>
-              </div>
-              <div className="xl:w-1/5 lg:w-1/3 p-1 m-0 flex flex-col justify-center items-center">
-                <a
-                  href="https://www.behance.net/davisccoica"
-                  target="blanck"
-                  className="flex flex-col justify-center items-center"
-                >
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="68"
-                    height="68"
-                    viewBox="0 0 50 50"
-                    className="p-1 cursor-pointer w-16 h-16 md:w-20 md:h-20 lg:w-24 lg:h-24"
-                  >
-                    <path
-                      className="svg-360"
-                      d="M 9 4 C 6.24 4 4 6.24 4 9 L 4 41 C 4 43.76 6.24 46 9 46 L 41 46 C 43.76 46 46 43.76 46 41 L 46 9 C 46 6.24 43.76 4 41 4 L 9 4 z M 12 18 L 18.730469 18 C 19.460469 18 23.410156 17.950312 23.410156 21.570312 C 23.410156 23.490313 22.099766 24.139688 21.509766 24.429688 C 22.389766 24.709688 24 25.52 24 28 C 24 31.83 19.609531 32 19.019531 32 L 12 32 L 12 18 z M 29 18 L 36 18 L 36 20 L 29 20 L 29 18 z M 15 20.429688 L 15 23.710938 L 18.220703 23.710938 C 18.660703 23.710938 20.119141 23.47 20.119141 22 C 20.119141 20.53 18.219687 20.429688 17.929688 20.429688 L 15 20.429688 z M 32.730469 21 C 36.630469 21 37.689609 24.039766 37.849609 24.759766 C 37.999609 25.489766 38 26.13 38 27 L 30.099609 27 C 30.099609 27.87 30.560625 29.830078 32.890625 29.830078 C 33.510625 29.830078 33.969453 29.680625 34.439453 29.390625 C 34.899453 29.100625 35.060938 28.819297 35.210938 28.529297 L 37.839844 28.529297 C 37.379844 29.679297 36.760078 30.550859 35.830078 31.130859 C 34.900078 31.710859 33.820078 32 32.580078 32 C 31.800078 32 31.03 31.850547 30.25 31.560547 C 29.63 31.270547 29.010781 30.840156 28.550781 30.410156 C 28.090781 29.970156 27.780703 29.389922 27.470703 28.669922 C 27.160703 28.089922 27 27.22 27 26.5 C 27 25.78 27.290469 21 32.730469 21 z M 32.730469 23.029297 C 30.470469 23.029297 30.099609 25.199844 30.099609 25.339844 L 35.060547 25.339844 C 34.900547 24.619844 34.250469 23.029297 32.730469 23.029297 z M 15 25.710938 L 15 29.570312 L 18.351562 29.570312 C 18.640563 29.570312 20.679688 29.480937 20.679688 27.710938 C 20.679687 25.950937 19.077562 25.710938 18.351562 25.710938 L 15 25.710938 z"
-                    ></path>
-                  </svg>
-                </a>
-              </div>
-              <div className="xl:w-1/5 lg:w-1/3 p-1 m-0 flex flex-col justify-center items-center">
-                <a
-                  href="https://github.com/Brandoncq"
-                  target="blanck"
-                  className="flex flex-col justify-center items-center"
-                >
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="68"
-                    height="68"
-                    viewBox="0 0 50 50"
-                    className="p-1 cursor-pointer w-16 h-16 md:w-20 md:h-20 lg:w-24 lg:h-24"
-                  >
-                    <path
-                      className="svg-360"
-                      d="M17.791,46.836C18.502,46.53,19,45.823,19,45v-5.4c0-0.197,0.016-0.402,0.041-0.61C19.027,38.994,19.014,38.997,19,39 c0,0-3,0-3.6,0c-1.5,0-2.8-0.6-3.4-1.8c-0.7-1.3-1-3.5-2.8-4.7C8.9,32.3,9.1,32,9.7,32c0.6,0.1,1.9,0.9,2.7,2c0.9,1.1,1.8,2,3.4,2 c2.487,0,3.82-0.125,4.622-0.555C21.356,34.056,22.649,33,24,33v-0.025c-5.668-0.182-9.289-2.066-10.975-4.975 c-3.665,0.042-6.856,0.405-8.677,0.707c-0.058-0.327-0.108-0.656-0.151-0.987c1.797-0.296,4.843-0.647,8.345-0.714 c-0.112-0.276-0.209-0.559-0.291-0.849c-3.511-0.178-6.541-0.039-8.187,0.097c-0.02-0.332-0.047-0.663-0.051-0.999 c1.649-0.135,4.597-0.27,8.018-0.111c-0.079-0.5-0.13-1.011-0.13-1.543c0-1.7,0.6-3.5,1.7-5c-0.5-1.7-1.2-5.3,0.2-6.6 c2.7,0,4.6,1.3,5.5,2.1C21,13.4,22.9,13,25,13s4,0.4,5.6,1.1c0.9-0.8,2.8-2.1,5.5-2.1c1.5,1.4,0.7,5,0.2,6.6c1.1,1.5,1.7,3.2,1.6,5 c0,0.484-0.045,0.951-0.11,1.409c3.499-0.172,6.527-0.034,8.204,0.102c-0.002,0.337-0.033,0.666-0.051,0.999 c-1.671-0.138-4.775-0.28-8.359-0.089c-0.089,0.336-0.197,0.663-0.325,0.98c3.546,0.046,6.665,0.389,8.548,0.689 c-0.043,0.332-0.093,0.661-0.151,0.987c-1.912-0.306-5.171-0.664-8.879-0.682C35.112,30.873,31.557,32.75,26,32.969V33 c2.6,0,5,3.9,5,6.6V45c0,0.823,0.498,1.53,1.209,1.836C41.37,43.804,48,35.164,48,25C48,12.318,37.683,2,25,2S2,12.318,2,25 C2,35.164,8.63,43.804,17.791,46.836z"
-                    ></path>
-                  </svg>
-                </a>
-              </div>
-              <div className="xl:w-1/5 lg:w-1/3 p-1 m-0 flex flex-col justify-center items-center">
-                <a
-                  href="https://www.linkedin.com/in/davis-brandon-54b344289/"
-                  target="blanck"
-                  className="flex flex-col justify-center items-center"
-                >
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="68"
-                    height="68"
-                    viewBox="0 0 50 50"
-                    className="p-1 cursor-pointer w-16 h-16 md:w-20 md:h-20 lg:w-24 lg:h-24"
-                  >
-                    <path
-                      className="svg-360"
-                      d="M41,4H9C6.24,4,4,6.24,4,9v32c0,2.76,2.24,5,5,5h32c2.76,0,5-2.24,5-5V9C46,6.24,43.76,4,41,4z M17,20v19h-6V20H17z M11,14.47c0-1.4,1.2-2.47,3-2.47s2.93,1.07,3,2.47c0,1.4-1.12,2.53-3,2.53C12.2,17,11,15.87,11,14.47z M39,39h-6c0,0,0-9.26,0-10 c0-2-1-4-3.5-4.04h-0.08C27,24.96,26,27.02,26,29c0,0.91,0,10,0,10h-6V20h6v2.56c0,0,1.93-2.56,5.81-2.56 c3.97,0,7.19,2.73,7.19,8.26V39z"
-                    ></path>
-                  </svg>
-                </a>
-              </div>
-              <div className="xl:w-1/5 lg:w-1/3 p-1 m-0 flex flex-col justify-center items-center">
-                <a
-                  href="https://x.com/Brandon03614"
-                  target="blanck"
-                  className="flex flex-col justify-center items-center"
-                >
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="68"
-                    height="68"
-                    viewBox="0 0 50 50"
-                    className="p-1 cursor-pointer w-16 h-16 md:w-20 md:h-20 lg:w-24 lg:h-24"
-                  >
-                    <path
-                      className="svg-360"
-                      d="M 11 4 C 7.134 4 4 7.134 4 11 L 4 39 C 4 42.866 7.134 46 11 46 L 39 46 C 42.866 46 46 42.866 46 39 L 46 11 C 46 7.134 42.866 4 39 4 L 11 4 z M 13.085938 13 L 21.023438 13 L 26.660156 21.009766 L 33.5 13 L 36 13 L 27.789062 22.613281 L 37.914062 37 L 29.978516 37 L 23.4375 27.707031 L 15.5 37 L 13 37 L 22.308594 26.103516 L 13.085938 13 z M 16.914062 15 L 31.021484 35 L 34.085938 35 L 19.978516 15 L 16.914062 15 z"
-                    ></path>
-                  </svg>
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div className="w-full flex flex-wrap p-0 m-0 justify-center items-center mb-20 lg:h-screen">
-        <div className="lg:w-1/2 w-full flex flex-wrap justify-center lg:pl-20">
-          <h1 className="text-white text-4xl font-light w-full text-center mb-10 hidden-effect">
-            Tecnologías y Herramientas que Uso
-          </h1>
+    <div className="w-full p-0 justify-center items-center flex flex-col">
+      <div className="w-full p-0 justify-center items-center flex flex-wrap xl:h-lvh lg:mt-2 mt-10">
+        <div className="md:w-1/3 w-full lg:p-5 justify-center items-center flex flex-col">
           <img
-            src="https://res.cloudinary.com/dmo6ofy2z/image/upload/v1719590920/samples/landscapes/olaf-val-UTk9cXzYWAg-unsplash_wws0qm.jpg"
+            src="https://images.unsplash.com/photo-1618477247222-acbdb0e159b3?q=80&w=1964&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
             alt=""
-            className="shadow-xl shadow-slate-600 w-full h-auto grayscale"
+            className="grayscale w-full rounded-xl"
           />
         </div>
+        <div className="md:w-2/3 w-full p-5 justify-center items-start flex flex-col">
+          <h1 className="text-white md:text-6xl text-3xl font-light text-left hidden-effect">
+            Davis Brandon
+          </h1>
+          <h1 className="text-zinc-400 md:text-6xl text-3xl font-semibold hidden-effect">
+            Desarrolador Web
+          </h1>
+          <h1 className="text-white md:text-6xl text-3xl font-semibold">
+            Full Stack
+          </h1>
+          <p className="text-white md:text-lg text-sm mt-10">
+            Soy un estudiante de séptimo ciclo de la carrera de Ingeniería de
+            Informática y Sistemas. Durante mi formación, he desarrollado
+            diversos proyectos utilizando tecnologías como SQL, PHP, JavaScript,
+            HTML y CSS, así como frameworks modernos como React, Node.js y
+            Next.js. Me especializo en crear soluciones web eficientes y
+            atractivas, aplicando conocimientos tanto de frontend como de
+            backend. Mis proyectos incluyen sistemas de inventario, gestores de
+            galerías y el desarrollo de herramientas para la gestión y
+            secuenciación de actividades en proyectos.
+          </p>
+        </div>
+      </div>
+      <div className="w-full p-0 justify-center flex flex-wrap">
+        <h1 className="text-zinc-800 lg:text-6xl text-4xl font-bold w-full text-center lg:mb-10 mb-0 mt-10 hidden-effect bg-slate-300 p-2">
+          Habilidades
+        </h1>
         <div className="lg:w-1/2 w-full flex flex-wrap justify-center">
-          <div className="mb-6 lg:w-2/3 w-full p-5">
-            <ul className="list-disc list-inside flex justify-center items-center">
-              <li className="text-white flex flex-col items-center justify-between font-semibold p-3">
+          <div className="mb-6 w-full flex flex-col items-center lg:px-10 px-4 py-4">
+            <h3 className="text-3xl text-white font-medium md:mt-10 mt-0 hidden-effect">
+              Tecnologías y Herramientas
+            </h3>
+            <p className="text-white text-md mt-10 hidden-effect">
+              En esta sección, destaco las herramientas y frameworks que domino.
+              Desde lenguajes de programación hasta plataformas de desarrollo y
+              herramientas de diseño, aquí resalto mi experiencia técnica y las
+              capacidades específicas que puedo aportar a proyectos.
+            </p>
+          </div>
+          <div className="mb-6 md:w-1/3 w-1/2 lg:p-5 px-4">
+            <ul className="list-disc list-inside">
+              <li className="text-white flex items-center justify-between">
+                JavaScript
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   x="0px"
@@ -175,7 +87,7 @@ function About() {
                   width="100"
                   height="100"
                   viewBox="0 0 48 48"
-                  className="hidden-effect w-12 h-12 md:w-20 md:h-20 lg:w-24 lg:h-24"
+                  className="hidden-effect p-1"
                 >
                   <path fill="#ffd600" d="M6,42V6h36v36H6z"></path>
                   <path
@@ -183,9 +95,9 @@ function About() {
                     d="M29.538 32.947c.692 1.124 1.444 2.201 3.037 2.201 1.338 0 2.04-.665 2.04-1.585 0-1.101-.726-1.492-2.198-2.133l-.807-.344c-2.329-.988-3.878-2.226-3.878-4.841 0-2.41 1.845-4.244 4.728-4.244 2.053 0 3.528.711 4.592 2.573l-2.514 1.607c-.553-.988-1.151-1.377-2.078-1.377-.946 0-1.545.597-1.545 1.377 0 .964.6 1.354 1.985 1.951l.807.344C36.452 29.645 38 30.839 38 33.523 38 36.415 35.716 38 32.65 38c-2.999 0-4.702-1.505-5.65-3.368L29.538 32.947zM17.952 33.029c.506.906 1.275 1.603 2.381 1.603 1.058 0 1.667-.418 1.667-2.043V22h3.333v11.101c0 3.367-1.953 4.899-4.805 4.899-2.577 0-4.437-1.746-5.195-3.368L17.952 33.029z"
                   ></path>
                 </svg>
-                JavaScript
               </li>
-              <li className="text-white flex flex-col items-center justify-between font-semibold p-1">
+              <li className="text-white flex items-center justify-between">
+                HTML
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   x="0px"
@@ -193,7 +105,7 @@ function About() {
                   width="100"
                   height="100"
                   viewBox="0 0 48 48"
-                  className="hidden-effect w-12 h-12 md:w-20 md:h-20 lg:w-24 lg:h-24"
+                  className="hidden-effect p-1"
                 >
                   <path
                     fill="#E65100"
@@ -212,9 +124,9 @@ function About() {
                     d="M24,30.9v4.2l-7.9-2.6L15.7,27h4l0.2,2.5L24,30.9z M19.1,17H24v-4h-9.1l0.7,12H24v-4h-4.6L19.1,17z"
                   ></path>
                 </svg>
-                HTML
               </li>
-              <li className="text-white flex flex-col items-center justify-between font-semibold p-3">
+              <li className="text-white flex items-center justify-between">
+                CSS
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   x="0px"
@@ -222,7 +134,7 @@ function About() {
                   width="100"
                   height="100"
                   viewBox="0 0 48 48"
-                  className="hidden-effect w-12 h-12 md:w-20 md:h-20 lg:w-24 lg:h-24"
+                  className="hidden-effect p-1"
                 >
                   <path
                     fill="#0277BD"
@@ -241,9 +153,9 @@ function About() {
                     d="M24,13v4h-8.9l-0.3-4H24z M19.4,21l0.2,4H24v-4H19.4z M19.8,27h-4l0.3,5.5l7.9,2.6v-4.2l-4.1-1.4L19.8,27z"
                   ></path>
                 </svg>
-                CSS
               </li>
-              <li className="text-white flex flex-col items-center justify-between font-semibold p-3">
+              <li className="text-white flex items-center justify-between">
+                PHP
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   x="0px"
@@ -251,7 +163,7 @@ function About() {
                   width="100"
                   height="100"
                   viewBox="0 0 80 80"
-                  className="hidden-effect w-12 h-12 md:w-20 md:h-20 lg:w-24 lg:h-24"
+                  className="hidden-effect p-1"
                 >
                   <path
                     fill="#dcd5f2"
@@ -272,15 +184,15 @@ function About() {
                     ></path>
                   </g>
                 </svg>
-                PHP
               </li>
-              <li className="text-white flex flex-col items-center justify-between font-semibold p-3">
+              <li className="text-white flex items-center justify-between">
+                SQL
                 <svg
                   width="100"
                   height="100"
                   viewBox="0 0 32 32"
                   xmlns="http://www.w3.org/2000/svg"
-                  className="hidden-effect w-12 h-12 md:w-20 md:h-20 lg:w-24 lg:h-24"
+                  className="hidden-effect p-1"
                 >
                   <title>file_type_sql</title>
                   <path
@@ -303,13 +215,13 @@ function About() {
                     fill="#FD6187"
                   />
                 </svg>
-                SQL
               </li>
             </ul>
           </div>
-          <div className="mb-6 lg:w-2/3 w-full p-5">
-            <ul className="list-disc list-inside ml-4 mt-2 flex justify-center itmes-center">
-              <li className="text-white flex flex-col items-center justify-between font-semibold p-3">
+          <div className="mb-6 md:w-1/3 w-1/2 lg:p-5 px-4">
+            <ul className="list-disc list-inside ml-4 mt-2">
+              <li className="text-white flex items-center justify-between">
+                Node.js
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   x="0px"
@@ -317,7 +229,7 @@ function About() {
                   width="100"
                   height="100"
                   viewBox="0 0 48 48"
-                  className="hidden-effect w-12 h-12 md:w-20 md:h-20 lg:w-24 lg:h-24"
+                  className="hidden-effect p-1"
                 >
                   <path
                     fill="#21a366"
@@ -328,9 +240,9 @@ function About() {
                     d="M28.856,32.937c-6.868,0-8.308-3.153-8.308-5.797c0-0.251,0.203-0.452,0.455-0.452h2.028	c0.224,0,0.413,0.163,0.448,0.384c0.306,2.066,1.218,3.108,5.371,3.108c3.308,0,4.715-0.747,4.715-2.502	c0-1.01-0.401-1.76-5.54-2.263c-4.299-0.424-6.955-1.371-6.955-4.809c0-3.167,2.672-5.053,7.147-5.053	c5.026,0,7.517,1.745,7.831,5.493c0.012,0.13-0.035,0.255-0.122,0.35c-0.086,0.09-0.208,0.145-0.334,0.145h-2.039	c-0.212,0-0.397-0.149-0.44-0.354c-0.491-2.173-1.678-2.868-4.904-2.868c-3.611,0-4.031,1.257-4.031,2.2	c0,1.143,0.495,1.477,5.367,2.122c4.825,0.64,7.116,1.544,7.116,4.935c0,3.418-2.853,5.379-7.827,5.379"
                   ></path>
                 </svg>
-                Node.js
               </li>
-              <li className="text-white flex flex-col items-center justify-between font-semibold p-3">
+              <li className="text-white flex items-center justify-between">
+                React.js
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   x="0px"
@@ -338,7 +250,7 @@ function About() {
                   width="100"
                   height="100"
                   viewBox="0 0 40 40"
-                  className="hidden-effect w-12 h-12 md:w-20 md:h-20 lg:w-24 lg:h-24"
+                  className="hidden-effect p-1"
                 >
                   <path
                     fill="#98ccfd"
@@ -359,9 +271,9 @@ function About() {
                     ></path>
                   </g>
                 </svg>
-                React.js
               </li>
-              <li className="text-white flex flex-col items-center justify-between font-semibold p-3">
+              <li className="text-white flex items-center justify-between">
+                Next.js
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   x="0px"
@@ -369,7 +281,7 @@ function About() {
                   width="100"
                   height="100"
                   viewBox="0 0 48 48"
-                  className="hidden-effect w-12 h-12 md:w-20 md:h-20 lg:w-24 lg:h-24"
+                  className="hidden-effect p-1"
                 >
                   <linearGradient
                     id="NRNx2IPDe7PJlJvrxOKgWa_MWiBjkuHeMVq_gr1"
@@ -440,9 +352,9 @@ function About() {
                     points="36.781,38.094 34.168,39.09 15.992,16.027 19.508,16.027"
                   ></polygon>
                 </svg>
-                Next.js
               </li>
-              <li className="text-white flex flex-col items-center justify-between font-semibold p-3">
+              <li className="text-white flex items-center justify-between">
+                Figma
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   x="0px"
@@ -450,7 +362,7 @@ function About() {
                   width="100"
                   height="100"
                   viewBox="0 0 48 48"
-                  className="hidden-effect w-12 h-12 md:w-20 md:h-20 lg:w-24 lg:h-24"
+                  className="hidden-effect p-1"
                 >
                   <path
                     fill="#e64a19"
@@ -470,9 +382,9 @@ function About() {
                   ></path>
                   <circle cx="32" cy="24" r="7" fill="#29b6f6"></circle>
                 </svg>
-                Figma
               </li>
-              <li className="text-white flex flex-col items-center justify-between font-semibold p-3">
+              <li className="text-white flex items-center justify-between">
+                Git
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   x="0px"
@@ -480,202 +392,192 @@ function About() {
                   width="100"
                   height="100"
                   viewBox="0 0 48 48"
-                  className="hidden-effect w-12 h-12 md:w-20 md:h-20 lg:w-24 lg:h-24"
+                  className="hidden-effect p-1"
                 >
                   <path
                     fill="#F4511E"
                     d="M42.2,22.1L25.9,5.8C25.4,5.3,24.7,5,24,5c0,0,0,0,0,0c-0.7,0-1.4,0.3-1.9,0.8l-3.5,3.5l4.1,4.1c0.4-0.2,0.8-0.3,1.3-0.3c1.7,0,3,1.3,3,3c0,0.5-0.1,0.9-0.3,1.3l4,4c0.4-0.2,0.8-0.3,1.3-0.3c1.7,0,3,1.3,3,3s-1.3,3-3,3c-1.7,0-3-1.3-3-3c0-0.5,0.1-0.9,0.3-1.3l-4-4c-0.1,0-0.2,0.1-0.3,0.1v10.4c1.2,0.4,2,1.5,2,2.8c0,1.7-1.3,3-3,3s-3-1.3-3-3c0-1.3,0.8-2.4,2-2.8V18.8c-1.2-0.4-2-1.5-2-2.8c0-0.5,0.1-0.9,0.3-1.3l-4.1-4.1L5.8,22.1C5.3,22.6,5,23.3,5,24c0,0.7,0.3,1.4,0.8,1.9l16.3,16.3c0,0,0,0,0,0c0.5,0.5,1.2,0.8,1.9,0.8s1.4-0.3,1.9-0.8l16.3-16.3c0.5-0.5,0.8-1.2,0.8-1.9C43,23.3,42.7,22.6,42.2,22.1z"
                   ></path>
                 </svg>
-                Git
               </li>
             </ul>
           </div>
         </div>
-      </div>
-      <div className="w-full flex flex-wrap p-0 m-0">
-        <div className="w-full flex flex-wrap lg:px-10 mb-5">
-          <h1 className="text-white text-6xl font-light w-full text-center mb-10 hidden-effect">
-            Proyectos Personales
-          </h1>
-          <div className="lg:w-5/12 w-full flex flex-col justify-center items-center p-5">
-            <h2 className="font-medium lg:text-5xl text-xl m-0 text-yellow-200 my-4 hidden-effect">
-              Herramienta de Estimación de Tiempos CPM - PERT
-            </h2>
-            <p className="font-base lg:text-sm text-xs m-0 text-white mt-2">
-              Esta aplicación permite a los usuarios elegir entre las secciones
-              de PERT y CPM para gestionar proyectos. Los usuarios pueden
-              especificar la cantidad de actividades, lo que genera una tabla
-              para completar los precedentes y tiempos. En la sección de PERT,
-              se ingresan tres tiempos para cada actividad: optimista, pesimista
-              y probable. La herramienta luego grafica un diagrama de flechas,
-              incluyendo flechas ficticias, que muestra visualmente la ruta
-              crítica. Además, detalla la ruta crítica en texto y muestra todas
-              las posibles rutas críticas si hay más de una. Para PERT, la
-              aplicación también calcula la varianza y permite ingresar un
-              tiempo específico 'x' para determinar la probabilidad de completar
-              el proyecto o las actividades dentro de ese tiempo.
-            </p>
-            <p className="font-base lg:text-sm text-xs m-0 text-white mt-2">
-              URL:
-              <a
-                href="https://brandoncq.github.io/EstimaciondeTiempo/#/"
-                target="blanck"
-                className="text-left text-yellow-400 italic"
-              >
-                Estimacion de Tiempo
-              </a>
+        <div
+          className="lg:w-1/2 w-full flex flex-wrap justify-center items-center blockquotes"
+          style={{ backgroundColor: "#1a1e23" }}
+        >
+          <div className="mb-6 w-full flex flex-col items-center lg:px-10 px-4 py-4">
+            <h3 className="text-3xl text-white font-medium mt-10 hidden-effect">
+              Diseño Responsivo Óptimo
+            </h3>
+            <p className="text-white text-md mt-10 hidden-effect">
+              Muestro ejemplos de diseño responsivo que he implementado. Incluyo
+              imágenes que demuestran cómo mis diseños se adaptan fluidamente a
+              diferentes dispositivos y tamaños de pantalla, asegurando una
+              experiencia de usuario óptima en cualquier contexto.
             </p>
           </div>
-          <div className="lg:w-7/12 w-full p-2">
-            <div className="w-full flex flex-wrap justify-center items-center">
-              <div className="w-full p-1 flex flex-wrap items-center">
-                <div className="lg:w-3/4 w-full p-1 flex flex-col">
-                  <img
-                    src="https://res.cloudinary.com/dmo6ofy2z/image/upload/v1719588650/samples/landscapes/Captura_de_pantalla_2024-06-28_102812_avn2z7.png"
-                    alt=""
-                    className="w-full h-auto pb-1 rounded-lg shadow-lg shadow-slate-800"
-                  />
-                </div>
-                <div className="lg:w-1/4 w-full p-1 flex flex-col">
-                  <img
-                    src="https://res.cloudinary.com/dmo6ofy2z/image/upload/v1719589614/samples/landscapes/Captura_de_pantalla_2024-06-28_104356_otylu1.png"
-                    alt=""
-                    className="w-full h-auto pb-1 rounded-3xl shadow-lg shadow-slate-800"
-                  />
-                </div>
-                <div className="lg:w-1/2 w-full p-1 flex flex-col">
-                  <img
-                    src="https://res.cloudinary.com/dmo6ofy2z/image/upload/v1719588650/samples/landscapes/Captura_de_pantalla_2024-06-28_102847_gtdxli.png"
-                    alt=""
-                    className="w-full h-auto rounded-lg shadow-lg shadow-slate-800"
-                  />
-                </div>
-                <div className="lg:w-1/2 w-full p-1 flex flex-col">
-                  <img
-                    src="https://res.cloudinary.com/dmo6ofy2z/image/upload/v1719589342/samples/landscapes/imagen_2024-06-28_104211302_rmu3cj.png"
-                    alt=""
-                    className="w-full h-auto rounded-lg shadow-lg shadow-slate-800"
-                  />
-                </div>
-              </div>
-              <div className="w-4/12 p-1"></div>
+          <div className="w-full flex flex-wrap lg:p-10">
+            <div className="lg:w-3/5 w-full flex flex-col justify-center items-center p-2">
+              <img
+                src="https://res.cloudinary.com/dmo6ofy2z/image/upload/v1719427753/samples/landscapes/Captura_de_pantalla_2024-06-26_134558_jcmvfo.png"
+                alt=""
+                className=" bg-white p-1 rounded-lg mb-4"
+              />
+              <img
+                src="https://res.cloudinary.com/dmo6ofy2z/image/upload/v1719442077/samples/landscapes/Captura_de_pantalla_2024-06-26_173602_rwlj3x.png"
+                alt=""
+                className=" bg-white p-1 rounded-lg mb-4"
+              />
+            </div>
+            <div className="lg:w-1/5 w-1/2 flex flex-col justify-center items-center p-2">
+              <img
+                src="
+            https://res.cloudinary.com/dmo6ofy2z/image/upload/v1719428080/samples/landscapes/Captura_de_pantalla_2024-06-26_134618_blapuj.png"
+                alt=""
+                className=" bg-white p-px rounded-xl mb-4"
+              />
+            </div>
+            <div className="lg:w-1/5 w-1/2  flex flex-col justify-center items-center p-2">
+              <img
+                src="
+            https://res.cloudinary.com/dmo6ofy2z/image/upload/v1719442075/samples/landscapes/Captura_de_pantalla_2024-06-26_173540_ngzxng.png"
+                alt=""
+                className=" bg-white p-px rounded-xl mb-4"
+              />
             </div>
           </div>
         </div>
-        <div className="w-full flex flex-wrap lg:px-10 mb-5">
-          <div className="lg:w-7/12 w-full p-2 lg:order-none order-last">
-            <div className="w-full flex flex-wrap justify-center items-center">
-              <div className="w-full p-1 flex flex-wrap items-center">
-                <div className="lg:w-3/4 w-full p-1 flex flex-col">
-                  <img
-                    src="https://res.cloudinary.com/dmo6ofy2z/image/upload/v1719949594/samples/landscapes/pixelcut-export_5_w1zqfn.png"
-                    alt=""
-                    className="w-full h-auto pb-1 rounded-lg shadow-lg shadow-slate-800"
-                  />
-                </div>
-                <div className="lg:w-1/4 w-full p-1 flex flex-col">
-                  <img
-                    src="https://res.cloudinary.com/dmo6ofy2z/image/upload/v1719948945/samples/landscapes/pixelcut-export_4_wmxuvb.png"
-                    alt=""
-                    className="w-full h-auto pb-1 rounded-3xl shadow-lg shadow-slate-800"
-                  />
-                </div>
-                <div className="lg:w-1/2 w-full p-1 flex flex-col">
-                  <img
-                    src="https://res.cloudinary.com/dmo6ofy2z/image/upload/v1719948970/samples/landscapes/Captura_de_pantalla_2024-07-02_123630_supubg.png"
-                    alt=""
-                    className="w-full h-auto rounded-lg shadow-lg shadow-slate-800"
-                  />
-                </div>
-                <div className="lg:w-1/2 w-full p-1 flex flex-col">
-                  <img
-                    src="https://res.cloudinary.com/dmo6ofy2z/image/upload/v1719948946/samples/landscapes/pixelcut-export_3_ramsg1.png"
-                    alt=""
-                    className="w-full h-auto rounded-lg shadow-lg shadow-slate-800"
-                  />
-                </div>
+        <div
+          className="lg:w-1/2 w-full flex flex-wrap blockquotes"
+          style={{ backgroundColor: "#1a1e23" }}
+        >
+          <div className="mb-6 w-full flex flex-col items-center lg:px-10 px-4 py-4">
+            <h3 className="text-3xl text-white font-medium mt-10 hidden-effect">
+              Animaciones y Transiciones
+            </h3>
+            <p className="text-white text-md mt-10 hidden-effect">
+              Aquí presento ejemplos visuales de animaciones y transiciones que
+              he creado. Desde efectos sutiles hasta interacciones complejas,
+              demuestro mi habilidad para mejorar la usabilidad y la estética de
+              las interfaces a través del movimiento.
+            </p>
+          </div>
+          <div className="w-full flex flex-wrap lg:p-10">
+            <div className="lg:w-1/2 w-full lg:p-1 flex justify-center items-center">
+              <div className="w-full flex flex-wrap border-zinc-400 lg:border-4 border-2 shadow-xl shadow-slate-700">
+                <SvgProyecto></SvgProyecto>
               </div>
-              <div className="w-4/12 p-1"></div>
             </div>
-          </div>
-          <div className="lg:w-5/12 w-full flex flex-col justify-center items-center p-5">
-            <h2 className="font-medium lg:text-5xl text-xl m-0 text-yellow-200 my-4 hidden-effect">
-              Digital Food Marketplace
-            </h2>
-            <p className="font-base lg:text-sm text-xs m-0 text-white mt-2">
-              Es una plataforma web diseñada para la venta y distribución de una
-              amplia variedad de productos alimenticios. Los usuarios pueden
-              explorar un catálogo diverso de comidas, desde platos preparados
-              hasta ingredientes frescos, con descripciones detalladas y
-              atractivas imágenes. La plataforma integra pasarelas de pago
-              PayPal y Stripe, asegurando transacciones rápidas y seguras. Con
-              un diseño responsive y una experiencia de usuario intuitiva,
-              garantiza una navegación fluida en cualquier dispositivo. La
-              seguridad de los datos está priorizada mediante encriptación y
-              protocolos avanzados.
-            </p>
-          </div>
-        </div>
-        <div className="w-full flex flex-wrap lg:px-10 mt-5">
-          <div className="lg:w-5/12 w-full flex flex-col justify-center items-center p-5">
-            <h2 className="font-medium lg:text-5xl text-xl m-0 text-yellow-200 my-4 hidden-effect">
-              Gestor de Galerías de Proyectos
-            </h2>
-            <p className="font-base lg:text-sm text-xs m-0 text-white mt-2">
-              El Gestor de Galerías de Proyectos es una plataforma que permite a
-              los usuarios visualizar, agregar, editar y eliminar proyectos en
-              forma de galerías de imágenes con descripciones. Cada proyecto se
-              presenta en una galería de imágenes que los usuarios pueden
-              navegar, ofreciendo una visualización atractiva y organizada.
-              Además, la plataforma cuenta con una sección de administración
-              conectada a una base de datos, donde los usuarios pueden gestionar
-              fácilmente sus proyectos: agregar nuevas galerías de imágenes,
-              editar los detalles de proyectos existentes o eliminarlos según
-              sea necesario. Esta herramienta es ideal para portafolios
-              creativos como diseñadores, fotógrafos y arquitectos, permitiendo
-              mostrar y manejar sus proyectos de manera eficiente y visualmente
-              impactante.
-            </p>
-          </div>
-          <div className="lg:w-7/12 w-full p-2">
-            <div className="w-full flex flex-wrap justify-center items-center">
-              <div className="w-full p-1 flex flex-wrap items-center">
-                <div className="lg:w-3/4 w-full p-1 flex flex-col">
-                  <img
-                    src="https://res.cloudinary.com/dmo6ofy2z/image/upload/v1719585389/samples/landscapes/pixelcut-export_12_gvtyzf.png"
-                    alt=""
-                    className="w-full h-auto pb-1 rounded-lg shadow-lg shadow-slate-800"
-                  />
-                </div>
-                <div className="lg:w-1/4 w-full p-1 flex flex-col">
-                  <img
-                    src="https://res.cloudinary.com/dmo6ofy2z/image/upload/v1719585389/samples/landscapes/pixelcut-export_11_yamfxn.png"
-                    alt=""
-                    className="w-full h-auto pb-1 rounded-xl shadow-lg shadow-slate-800"
-                  />
-                </div>
-                <div className="lg:w-1/2 w-full p-1 flex flex-col">
-                  <img
-                    src="https://res.cloudinary.com/dmo6ofy2z/image/upload/v1719586109/samples/landscapes/Captura_de_pantalla_2024-06-28_092811_cyqmjp.png"
-                    alt=""
-                    className="w-full h-auto rounded-lg shadow-lg shadow-slate-800"
-                  />
-                </div>
-                <div className="lg:w-1/2 w-full p-1 flex flex-col">
-                  <img
-                    src="https://res.cloudinary.com/dmo6ofy2z/image/upload/v1719586475/samples/landscapes/Captura_de_pantalla_2024-06-28_095400_bl9dvl.png"
-                    alt=""
-                    className="w-full h-auto rounded-lg shadow-lg shadow-slate-800"
-                  />
-                </div>
+            <div className="lg:w-1/2 w-full lg:p-1 flex justify-center items-center">
+              <div className="w-full flex flex-wrap border-zinc-400 lg:border-4 border-2 shadow-xl shadow-slate-700">
+                <SvgCasa></SvgCasa>
+              </div>
+            </div>
+            <div className="w-full lg:p-1 flex justify-center items-cente mt-4">
+              <div className="w-full flex flex-wrap border-zinc-400 lg:border-4 border-2 shadow-xl shadow-slate-700">
+                <AnimationSection></AnimationSection>
+              </div>
+            </div>
+            <div className="w-full lg:p-1 flex justify-center items-cente mt-4">
+              <div className="w-full flex flex-col justify-center items-center border-zinc-400  lg:border-4 border-2 shadow-xl shadow-slate-700 relative">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="242"
+                  height="325"
+                  fill="none"
+                  viewBox="0 0 242 325"
+                  className="w-1/5"
+                >
+                  <path
+                    fill="#00FFF3"
+                    fillOpacity={0}
+                    stroke="#00FFF3"
+                    d="M10 157V10h94.667a99.998 99.998 0 0127.146 3.755L138 15.5l5.6 1.96a85.936 85.936 0 0144.298 35.275l2.925 4.64a99.145 99.145 0 0113.682 35.151l.178.98a100.02 100.02 0 01.736 31.104l-.14 1.049A50.046 50.046 0 01202.385 137l-2.885 7.5-12 23-10.399 11.16a92.856 92.856 0 01-57.284 28.938L112 208.5H49.5V277l81.341-.919a55.398 55.398 0 0037.104-14.832l4.752-4.42a54.833 54.833 0 0011.14-14.546l.18-.341a52.908 52.908 0 004.276-38.515l-.08-.294a27.32 27.32 0 00-1.933-5.073L183 191.5l9.887-11.932a100.046 100.046 0 008.377-11.741L210 153.5l1.75 2.052A86.063 86.063 0 01229.5 189.5l1.991 10.809a91.172 91.172 0 01-3.723 46.963l-.281.794a96.037 96.037 0 01-7.48 16.171L215.5 272l-2.939 3.762a100.018 100.018 0 01-22.383 21l-4.482 3.063A92.78 92.78 0 01133.354 316H10V170.5h95l7.513-1.326a61.91 61.91 0 0018.017-6.152l.429-.226a59.572 59.572 0 0018.831-15.533l.222-.278a57.958 57.958 0 0011.034-22.404l.2-.817a54.61 54.61 0 00-11.45-48.403l-2.507-2.946A65.112 65.112 0 0097.697 49.5H49.5V117H138l14.5 1.5-2.394 7.181a41.65 41.65 0 01-17.442 22.154l-1.817 1.136A52.836 52.836 0 01102.85 157H10z"
+                  ></path>
+                </svg>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="242"
+                  height="325"
+                  fill="none"
+                  viewBox="0 0 242 325"
+                  className="w-1/5 absolute"
+                >
+                  <path
+                    className="animationwater"
+                    fill="#00FFF3"
+                    stroke="#00FFF3"
+                    d="M10 157V10h94.667a99.998 99.998 0 0127.146 3.755L138 15.5l5.6 1.96a85.936 85.936 0 0144.298 35.275l2.925 4.64a99.145 99.145 0 0113.682 35.151l.178.98a100.02 100.02 0 01.736 31.104l-.14 1.049A50.046 50.046 0 01202.385 137l-2.885 7.5-12 23-10.399 11.16a92.856 92.856 0 01-57.284 28.938L112 208.5H49.5V277l81.341-.919a55.398 55.398 0 0037.104-14.832l4.752-4.42a54.833 54.833 0 0011.14-14.546l.18-.341a52.908 52.908 0 004.276-38.515l-.08-.294a27.32 27.32 0 00-1.933-5.073L183 191.5l9.887-11.932a100.046 100.046 0 008.377-11.741L210 153.5l1.75 2.052A86.063 86.063 0 01229.5 189.5l1.991 10.809a91.172 91.172 0 01-3.723 46.963l-.281.794a96.037 96.037 0 01-7.48 16.171L215.5 272l-2.939 3.762a100.018 100.018 0 01-22.383 21l-4.482 3.063A92.78 92.78 0 01133.354 316H10V170.5h95l7.513-1.326a61.91 61.91 0 0018.017-6.152l.429-.226a59.572 59.572 0 0018.831-15.533l.222-.278a57.958 57.958 0 0011.034-22.404l.2-.817a54.61 54.61 0 00-11.45-48.403l-2.507-2.946A65.112 65.112 0 0097.697 49.5H49.5V117H138l14.5 1.5-2.394 7.181a41.65 41.65 0 01-17.442 22.154l-1.817 1.136A52.836 52.836 0 01102.85 157H10z"
+                  ></path>
+                </svg>
               </div>
             </div>
           </div>
         </div>
+        <div className="lg:w-1/2 w-full flex flex-wrap justify-center">
+          <div className="mb-6 w-full flex flex-col items-center lg:px-10 px-4 py-4">
+            <h3 className="text-3xl text-white font-medium mt-10 hidden-effect">
+              Login ,Autenticación y Envio de Formularios
+            </h3>
+            <p className="text-white text-md mt-10 hidden-effect">
+              Esta sección muestra cómo implemento soluciones de login y
+              autenticación utilizando diversas plataformas como Google, GitHub,
+              YouTube, Twitter, entre otras. Además, destaco mi capacidad para
+              integrar formularios que permiten el envío de mensajes a través de
+              una pasarela de pago u otros medios, facilitando la interacción
+              segura y eficiente con los usuarios.
+            </p>
+          </div>
+          <div className="w-full flex flex-wrap justify-center lg:px-10">
+            <div className="lg:w-1/2 w-full flex flex-wrap justify-center p-2">
+              <img
+                src="
+          https://res.cloudinary.com/dmo6ofy2z/image/upload/v1719458654/samples/landscapes/imagen_2024-06-26_222403730_cg8phg.png"
+                alt=""
+                className=" bg-white p-1 rounded-xl mb-4"
+              />
+            </div>
+            <div className="lg:w-1/2 w-full flex flex-wrap justify-center p-2">
+              <img
+                src="
+          https://res.cloudinary.com/dmo6ofy2z/image/upload/v1719458814/samples/landscapes/imagen_2024-06-26_222643896_vcbcih.png"
+                alt=""
+                className=" bg-white p-1 rounded-xl mb-4"
+              />
+            </div>
+          </div>
+          <div className="mb-6 w-full flex flex-col items-center px-10 py-4">
+            <h3 className="text-3xl text-white font-medium mt-10 hidden-effect">
+              Integración de Pasarelas de Pagos
+            </h3>
+            <p className="text-white text-md mt-10 hidden-effect">
+              En esta sección, exhibo mi experiencia en la integración de
+              pasarelas de pagos seguras y eficientes en aplicaciones web.
+              Muestro ejemplos concretos de cómo he implementado soluciones de
+              pago utilizando pasarelas reconocidas como PayPal, Stripe, o
+              cualquier otra pasarela específica requerida por el cliente.
+            </p>
+          </div>
+          <div className="w-full flex flex-wrap justify-center">
+            <div className="lg:w-2/5 lg:p-0 p-2 w-full flex flex-wrap justify-center">
+              <img
+                src="
+          https://res.cloudinary.com/dmo6ofy2z/image/upload/v1719950302/samples/landscapes/pixelcut-export_6_wqek4k.png"
+                alt=""
+                className=" bg-white p-1 rounded-xl mb-4"
+              />
+            </div>
+          </div>
+        </div>
+        <div
+          className="w-1/3 flex flex-wrap justify-center items-center blockquotes"
+          style={{ backgroundColor: "#1a1e23" }}
+        ></div>
       </div>
     </div>
   );
-}
+};
 
-export default About;
+export default SobreMi;
