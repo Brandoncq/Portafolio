@@ -14,11 +14,7 @@ export const Work = () => {
   const [slides, setData] = useState(null);
   const handleImageClick = (proyecto) => {
     setShowPopover(true);
-    console.log(slides);
-    console.log(proyecto);
-    console.log(slides[proyecto]);
     setSrcmodal(slides[proyecto] || []);
-    console.log(srcmodal);
   };
   const handleClickOutside = () => {
     setShowPopover(false);
@@ -79,24 +75,18 @@ export const Work = () => {
     });
   };
   const prevSlide = () => {
-    console.log(srcmodal.length);
     setActiveIndex((prevIndex) =>
       prevIndex === 0 ? srcmodal.length - 1 : prevIndex - 1
     );
-    console.log(activeIndex);
   };
 
   const nextSlide = () => {
-    console.log(srcmodal.length);
     setActiveIndex((prevIndex) =>
       prevIndex === srcmodal.length - 1 ? 0 : prevIndex + 1
     );
-    console.log(activeIndex);
   };
   const goToSlide = (index) => {
-    console.log(srcmodal.length);
     setActiveIndex(index);
-    console.log(activeIndex);
   };
   return (
     <div className="m-0 p-0 w-full">
@@ -186,7 +176,7 @@ export const Work = () => {
               >
                 <img
                   src={item}
-                  className="absolute block w-auto h-full object-cover -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 lg:p-12"
+                  className="absolute block lg:w-auto w-full lg:h-full w:h-auto object-cover -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 lg:p-12 p-2"
                   alt="..."
                 />
               </div>
