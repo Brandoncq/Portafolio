@@ -15,6 +15,7 @@ export const Work = () => {
   const handleImageClick = (proyecto) => {
     setShowPopover(true);
     setSrcmodal(slides[proyecto] || []);
+    setActiveIndex(0);
   };
   const handleClickOutside = () => {
     setShowPopover(false);

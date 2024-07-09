@@ -9,8 +9,8 @@ export const backup = {
   gestor: [
     "https://res.cloudinary.com/dmo6ofy2z/image/upload/v1719539798/samples/landscapes/pixelcut-export_3_czvxjj.jpg",
     "https://res.cloudinary.com/dmo6ofy2z/image/upload/v1719442077/samples/landscapes/Captura_de_pantalla_2024-06-26_173602_rwlj3x.png",
-    "https://res.cloudinary.com/dmo6ofy2z/image/upload/v1719442077/samples/landscapes/Captura_de_pantalla_2024-06-26_173602_rwlj3x.png",
     "https://res.cloudinary.com/dmo6ofy2z/image/upload/v1719380869/samples/landscapes/Captura_de_pantalla_2024-06-26_004716_ozcmty.png",
+    "https://res.cloudinary.com/dmo6ofy2z/image/upload/v1719380870/samples/landscapes/Captura_de_pantalla_2024-06-26_004725_jnphua.png",
     "https://res.cloudinary.com/dmo6ofy2z/image/upload/v1719380814/samples/landscapes/imagen_2024-06-26_004643583_jry7nx.png",
   ],
   alquiler: [

@@ -271,12 +271,12 @@ function About() {
               />
             </div>
           </div>
-          <div className="w-1/4 px-1 flex flex-col justify-between">
-            <div className="w-full overflow-hidden">
+          <div className="w-1/4 px-1 flex flex-col justify-center">
+            <div className="w-full overflow-hidden mb-2">
               <img
                 src="https://res.cloudinary.com/dmo6ofy2z/image/upload/v1718469326/pscoxairhsc2eqvmlfim.jpg"
                 alt=""
-                className="w-full mb-2 hover:scale-105 hover:grayscale cursor-pointer transition-all duration-500 ease-in-out"
+                className="w-full hover:scale-105 hover:grayscale cursor-pointer transition-all duration-500 ease-in-out"
                 onClick={() =>
                   handleImageClick(
                     "https://res.cloudinary.com/dmo6ofy2z/image/upload/v1719380869/samples/landscapes/Captura_de_pantalla_2024-06-26_004716_ozcmty.png"
@@ -288,7 +288,7 @@ function About() {
               <img
                 src="https://cumisucv.org.ve/wp-content/uploads/2022/05/PayPal-Logo.png"
                 alt=""
-                className="w-full mb-2 hover:scale-105 hover:grayscale cursor-pointer transition-all duration-500 ease-in-out border-zinc-300 border-2"
+                className="w-full mt-2 hover:scale-105 hover:grayscale cursor-pointer transition-all duration-500 ease-in-out border-zinc-300 border-2"
                 onClick={() =>
                   handleImageClick(
                     "https://res.cloudinary.com/dmo6ofy2z/image/upload/v1719948946/samples/landscapes/pixelcut-export_3_ramsg1.png"
