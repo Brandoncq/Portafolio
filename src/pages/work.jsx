@@ -110,7 +110,7 @@ export const Work = () => {
             <div className="flex flex-col justify-center m-0 lg:w-1/2 w-full p-8 border-8 border-gray-800 mt-6">
               <div
                 onClick={() => scrollToSection(estimacionTiemposRef)}
-                className="font-bold lg:text-2xl text-xl m-0 text-gray-900 mt-2 cursor-pointer hidden-effect hover:text-white hover:bg-gray-800 rounded-md px-1 z-10"
+                className="font-bold lg:text-2xl text-xl m-0 text-gray-900 mt-2 cursor-pointer hidden-effect hover:text-white hover:bg-gray-800 rounded-md px-2 z-10 transition-all ease-in-out duration-300"
               >
                 Herramienta de Estimación de Tiempos CPM - PERT
               </div>
@@ -120,7 +120,7 @@ export const Work = () => {
               </p>
               <div
                 onClick={() => scrollToSection(gestorProyectosRef)}
-                className="font-bold lg:text-2xl text-xl m-0 text-gray-900 mt-2 cursor-pointer hidden-effect hover:text-white hover:bg-gray-800 rounded-md px-1 z-10"
+                className="font-bold lg:text-2xl text-xl m-0 text-gray-900 mt-2 cursor-pointer hidden-effect hover:text-white hover:bg-gray-800 rounded-md px-2 z-10 transition-all ease-in-out duration-300"
               >
                 Gestor de Galerías de Proyectos
               </div>
@@ -130,7 +130,7 @@ export const Work = () => {
               </p>
               <div
                 onClick={() => scrollToSection(alquilerDisfracesRef)}
-                className="font-bold lg:text-2xl text-xl m-0 text-gray-900 mt-2 cursor-pointer hidden-effect hover:text-white hover:bg-gray-800 rounded-md px-1 z-10"
+                className="font-bold lg:text-2xl text-xl m-0 text-gray-900 mt-2 cursor-pointer hidden-effect hover:text-white hover:bg-gray-800 rounded-md px-2 z-10 transition-all ease-in-out duration-300"
               >
                 Sistema de Alquiler de Disfraces
               </div>
@@ -140,7 +140,7 @@ export const Work = () => {
               </p>
               <div
                 onClick={() => scrollToSection(tiendafoodRef)}
-                className="font-bold lg:text-2xl text-xl m-0 text-gray-900 mt-2 cursor-pointer hidden-effect hover:text-white hover:bg-gray-800 rounded-md px-1 z-10"
+                className="font-bold lg:text-2xl text-xl m-0 text-gray-900 mt-2 cursor-pointer hidden-effect hover:text-white hover:bg-gray-800 rounded-md px-2 z-10 transition-all ease-in-out duration-300"
               >
                 Digital Food Marketplace
               </div>
@@ -161,10 +161,10 @@ export const Work = () => {
           ref={popoverRef}
         >
           <div
-            className="absolute top-0 left-0 m-4 text-3xl text-white z-40 font-normal cursor-pointer rounded-full hover:bg-zinc-400 p-3"
+            className="absolute top-0 left-0 m-4 text-3xl text-white z-40 font-normal cursor-pointer rounded-full hover:bg-zinc-400 p-3 aspect-square flex justify-center items-center w-10 h-10"
             onClick={handleClickOutside}
           >
-            <h3>X</h3>
+            X
           </div>
           <div className="relative h-full w-full overflow-hidden rounded-lg">
             {srcmodal.map((item, index) => (
@@ -262,14 +262,14 @@ export const Work = () => {
                 width="60"
                 height="60"
                 viewBox="0 0 50 50"
-                className="w-12 h-12 lg:w-16 lg:h-16 absolute top-0 right-0 bg-white cursor-pointer lg:m-4 m-1 lg:p-4 p-3 fill-zinc-500 border-2 border-zinc-400 rounded-lg hover:bg-zinc-400 hover:fill-white"
+                className="w-10 h-10 lg:w-12 lg:h-12 absolute top-0 right-0 bg-white cursor-pointer lg:m-4 m-1 lg:p-4 p-3 fill-zinc-500 border-2 border-zinc-400 rounded-lg hover:bg-zinc-400 hover:fill-white aspect-square flex justify-center items-center transition-all ease-in-out duration-300"
               >
                 <path d="M 0 9 L 0 11 L 50 11 L 50 9 Z M 0 24 L 0 26 L 50 26 L 50 24 Z M 0 39 L 0 41 L 50 41 L 50 39 Z"></path>
               </svg>
             </NavLink>
             <button
               onClick={handleScrollToTop}
-              className="absolute bottom-0 right-0 bg-white cursor-pointer lg:m-4 m-1 lg:p-4 p-3 rounded-lg border border-zinc-400 text-xl text-zinc-500 hover:bg-zinc-600 hover:text-white"
+              className="absolute bottom-0 right-0 bg-white cursor-pointer lg:m-4 m-1 lg:p-4 p-3 rounded-lg border border-zinc-400 text-xl text-zinc-500 hover:bg-zinc-600 hover:text-white aspect-square flex justify-center items-center w-10 h-12 transition-all ease-in-out duration-300"
             >
               ᐱ
             </button>

@@ -164,7 +164,7 @@ export const Formulario = ({ service, template, publickey, captcha }) => {
         <input
           type="submit"
           id="button"
-          className="cursor-pointer text-black m-0 lg:w-1/3 w-1/2 p-2 font-medium text-ss bg-white rounded-lg hover:bg-neutral-600 hover:text-white text-center"
+          className="cursor-pointer text-black m-0 lg:w-1/3 w-1/2 p-2 font-medium text-ss bg-white rounded-lg hover:bg-neutral-600 hover:text-white text-center transition-all duration-300 ease-in-out"
         />
       </div>
     </form>
