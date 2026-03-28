@@ -1,30 +1,32 @@
-import { Route, Routes, useLocation } from "react-router-dom";
-import { Navbar } from "./components/nav";
-import { Footer } from "./components/Foot";
-//import { Work, Contact,ProjectDetails, About } from './components/pages';
-import { Load } from "./load.jsx";
-import { useState, useEffect } from "react";
-import { lazy, Suspense } from "react";
-const About = lazy(() => import("./pages/about.jsx"));
-const Work = lazy(() => import("./pages/work.jsx"));
-const SobreMi = lazy(() => import("./pages/sobremi.jsx"));
-
+import "./assets/index.css";
+import Navbar from "./components/Navbar";
+import Hero from "./components/Hero";
+import About from "./components/About";
+import Projects from "./components/Projects";
+import Skills from "./components/Skills";
+import Education from "./components/Education";
+import Contact from "./components/Contact";
+import Footer from "./components/Footer";
 function App() {
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, []);
   return (
-    <div className="App">
-      {/*<Navbar></Navbar>*/}
-      <Suspense delayMs={5000} fallback={<Load />}>
-        <Routes>
-          <Route index element={<About />} />
-          <Route path="/SobreMi" element={<SobreMi />} />
-          <Route path="/Proyectos" element={<Work />} />
-        </Routes>
-      </Suspense>
-      <Footer></Footer>
+    <div className="w-full bg-surface text-on-surface selection:bg-primary-container selection:text-on-primary">
+      <Navbar />
+      <main>
+        <Hero />
+        <About />
+        <Projects />
+        <Skills />
+        <Education />
+        <Contact
+          service={import.meta.env.VITE_EMAIL_SERVICE}
+          template={import.meta.env.VITE_EMAIL_TEMPLATE}
+          publickey={import.meta.env.VITE_EMAIL_SECRET}
+          captcha={import.meta.env.VITE_CAPTCHA_SECRET}
+        />
+      </main>
+      <Footer />
     </div>
   );
 }
+
 export default App;
