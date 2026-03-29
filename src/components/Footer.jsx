@@ -33,6 +33,11 @@ export default function Footer() {
           </a>
         </div>
       </div>
+      <div className="mt-10 text-center">
+        <p className="text-xs text-[#6b7280] italic tracking-wide select-none">
+          Proud grandson of farmers.
+        </p>
+      </div>
     </footer>
   );
 }

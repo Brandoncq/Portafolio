@@ -13,12 +13,6 @@ export default function About() {
               <p className="text-3xl font-light text-on-surface leading-snug">
                 Based in Tacna, Peru.
               </p>
-              <p
-                translate="no"
-                className="text-3xl mt-4 font-semibold text-primary-container underline decoration-primary-fixed-dim decoration-4 underline-offset-8 italic select-none"
-              >
-                "nieto de campesinos"
-              </p>
             </div>
             <div>
               <p className="text-xl text-on-surface-variant leading-relaxed font-body">
