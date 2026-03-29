@@ -17,7 +17,10 @@ function Education() {
                 </p>
               </div>
               <div className="flex items-center gap-4 text-on-surface-variant">
-                <span translate="no" className="material-symbols-outlined">
+                <span
+                  translate="no"
+                  className="material-symbols-outlined select-none"
+                >
                   event
                 </span>
                 <span className="font-semibold">Graduating Dec 2025</span>

@@ -45,11 +45,20 @@ export default function ProjectsCarousel({ projects, onSelect, setOpenModal }) {
   const getStyle = (index) => {
     const offset = index - active;
 
-    if (offset === 0) return "scale-110 z-30 translate-x-0 opacity-100";
-    if (offset === -1) return "scale-95 z-20 -translate-x-44 opacity-80";
-    if (offset === 1) return "scale-95 z-20 translate-x-44 opacity-80";
-    if (offset === -2) return "scale-80 z-10 -translate-x-80 opacity-40";
-    if (offset === 2) return "scale-80 z-10 translate-x-80 opacity-40";
+    if (offset === 0)
+      return "scale-110 z-30 translate-x-0 opacity-100 blur-0 grayscale-0";
+
+    if (offset === -1)
+      return "scale-95 z-20 -translate-x-44 opacity-70 blur-[1px] grayscale-[75%]";
+
+    if (offset === 1)
+      return "scale-95 z-20 translate-x-44 opacity-70 blur-[1px] grayscale-[75%]";
+
+    if (offset === -2)
+      return "scale-80 z-10 -translate-x-80 opacity-40 blur-[3px] grayscale-[90%]";
+
+    if (offset === 2)
+      return "scale-80 z-10 translate-x-80 opacity-40 blur-[3px] grayscale-[90%]";
 
     return "hidden";
   };
@@ -106,15 +115,26 @@ export default function ProjectsCarousel({ projects, onSelect, setOpenModal }) {
             }}
             className={`absolute transition-all duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] cursor-pointer ${getStyle(i)}`}
           >
-            <img
-              src={project.images.cover}
-              className="w-56 sm:w-64 md:w-72 h-80 sm:h-96 object-cover rounded-xl shadow-2xl select-none"
-              draggable={false}
-            />
+            <div className="relative overflow-hidden shadow-xl">
+              <img
+                src={project.images.cover}
+                className="w-56 sm:w-64 md:w-72 h-80 sm:h-96 object-cover select-none"
+                draggable={false}
+              />
 
-            <p className="text-center mt-3 text-sm sm:text-base font-medium">
-              {project.name}
-            </p>
+              {/* OVERLAY */}
+              <div
+                className={`absolute bottom-0 left-0 w-full p-4 bg-gradient-to-t from-black/90 via-black/50 to-transparent transition-all duration-300 ${
+                  i === active
+                    ? "opacity-100 translate-y-0"
+                    : "opacity-0 translate-y-4"
+                }`}
+              >
+                <p className="text-sm sm:text-lg font-medium uppercase text-white tracking-wide text-center">
+                  {project.name}
+                </p>
+              </div>
+            </div>
           </div>
         ))}
       </div>

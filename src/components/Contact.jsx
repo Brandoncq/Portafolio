@@ -72,7 +72,7 @@ export default function Contact({ service, template, publickey, captcha }) {
             </label>
             <input
               name="from_name"
-              className="w-full bg-slate-100 border border-transparent rounded-lg p-4 focus:outline-none focus:border-primary-fixed-dim/40 focus:ring-2 focus:ring-slate-400 transition-all duration-300 ease-out"
+              className="w-full placeholder:select-none bg-slate-100 border border-transparent rounded-lg p-4 focus:outline-none focus:border-primary-fixed-dim/40 focus:ring-2 focus:ring-slate-400 transition-all duration-300 ease-out"
               placeholder="Your full name"
               type="text"
               required
@@ -85,7 +85,7 @@ export default function Contact({ service, template, publickey, captcha }) {
             </label>
             <input
               name="from_email"
-              className="w-full bg-slate-100 border border-transparent rounded-lg p-4 focus:outline-none focus:border-primary-fixed-dim/40 focus:ring-2 focus:ring-slate-400 transition-all duration-300 ease-out"
+              className="w-full placeholder:select-none bg-slate-100 border border-transparent rounded-lg p-4 focus:outline-none focus:border-primary-fixed-dim/40 focus:ring-2 focus:ring-slate-400 transition-all duration-300 ease-out"
               placeholder="your@email.com"
               type="email"
               required
@@ -100,7 +100,7 @@ export default function Contact({ service, template, publickey, captcha }) {
           </label>
           <input
             name="from_asunto"
-            className="w-full bg-slate-100 border border-transparent rounded-lg p-4 focus:outline-none focus:border-primary-fixed-dim/40 focus:ring-2 focus:ring-slate-400 transition-all duration-300 ease-out"
+            className="w-full placeholder:select-none bg-slate-100 border border-transparent rounded-lg p-4 focus:outline-none focus:border-primary-fixed-dim/40 focus:ring-2 focus:ring-slate-400 transition-all duration-300 ease-out"
             placeholder="Project inquiry / Collaboration / Job opportunity"
             type="text"
             required
@@ -113,7 +113,7 @@ export default function Contact({ service, template, publickey, captcha }) {
           </label>
           <textarea
             name="message"
-            className="w-full bg-slate-100 border border-transparent rounded-lg p-4 focus:outline-none focus:border-primary-fixed-dim/40 focus:ring-2 focus:ring-slate-400 transition-all duration-300 ease-out"
+            className="w-full placeholder:select-none bg-slate-100 border border-transparent rounded-lg p-4 focus:outline-none focus:border-primary-fixed-dim/40 focus:ring-2 focus:ring-slate-400 transition-all duration-300 ease-out"
             placeholder="Briefly describe your project, goals, timeline, or any specific requirements..."
             rows="5"
             required
@@ -125,7 +125,7 @@ export default function Contact({ service, template, publickey, captcha }) {
           <ReCAPTCHA
             sitekey={captcha}
             ref={refCaptcha}
-            theme="dark"
+            theme="light"
             onChange={handleCaptchaChange}
           />
         </div>
@@ -135,7 +135,7 @@ export default function Contact({ service, template, publickey, captcha }) {
 
         <button
           type="submit"
-          className="w-full bg-slate-700 text-white py-5 rounded-lg font-bold text-xl hover:shadow-2xl active:scale-[0.98] transition-all ease-in-out duration-300"
+          className="w-full bg-slate-700 text-white py-5 rounded-lg font-bold text-xl hover:shadow-2xl active:scale-[0.98] transition-all ease-in-out duration-300 select-none"
         >
           Send Message
         </button>

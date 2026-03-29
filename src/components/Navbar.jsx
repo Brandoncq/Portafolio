@@ -43,7 +43,7 @@ export default function Navbar() {
     }`;
 
   return (
-    <nav className="fixed top-0 w-full z-20 bg-[#f9f9fe]/80 backdrop-blur-md shadow-[0_20px_40px_rgba(0,31,63,0.06)]">
+    <nav className="fixed top-0 w-full z-50 bg-[#f9f9fe]/80 backdrop-blur-md shadow-[0_20px_40px_rgba(0,31,63,0.06)]">
       <div className="flex justify-between items-center px-8 py-4 max-w-7xl mx-auto">
         {/* Logo */}
         <div className="text-xl font-extrabold tracking-tighter text-[#001f3f] font-['Manrope']">

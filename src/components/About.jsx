@@ -15,7 +15,7 @@ export default function About() {
               </p>
               <p
                 translate="no"
-                className="text-3xl mt-4 font-semibold text-primary-container underline decoration-primary-fixed-dim decoration-4 underline-offset-8 italic"
+                className="text-3xl mt-4 font-semibold text-primary-container underline decoration-primary-fixed-dim decoration-4 underline-offset-8 italic select-none"
               >
                 "nieto de campesinos"
               </p>
@@ -32,7 +32,7 @@ export default function About() {
               <div className="p-6 bg-surface rounded-xl border border-outline-variant/15 shadow-sm">
                 <span
                   translate="no"
-                  className="material-symbols-outlined text-primary-container text-4xl mb-4"
+                  className="material-symbols-outlined text-primary-container text-4xl mb-4 select-none"
                 >
                   location_on
                 </span>
@@ -44,7 +44,7 @@ export default function About() {
               <div className="p-6 bg-surface rounded-xl border border-outline-variant/15 shadow-sm">
                 <span
                   translate="no"
-                  className="material-symbols-outlined text-primary-container text-4xl mb-4"
+                  className="material-symbols-outlined text-primary-container text-4xl mb-4 select-none"
                 >
                   school
                 </span>

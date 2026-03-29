@@ -15,7 +15,7 @@ export default function Projects() {
         "Web and mobile application designed to promote tourism in Tacna through the visualization of historical locations. Features interactive maps, custom route generation similar to Google Maps, multimedia content including images and 360° videos, and optimized asset storage for performance.",
       tech: ["Next.js", "PostgreSQL", "Mapbox", "React Native"],
       images: {
-        cover: "/tamatacna-cover.png",
+        cover: "tamatacna.jpg",
         desktop: "/tamatacna-desktop.png",
         mobile: "/tamatacna-mobile.png",
       },
@@ -26,10 +26,10 @@ export default function Projects() {
       client: "DEC S.A.C.",
       description: "Geo-based control and anti-fraud validation",
       details:
-        "Web platform for managing surveys with real-time geolocation tracking. Enables administrator control over surveyors, live monitoring via map integrations (Leaflet), real-time data visualization, and proximity-based restrictions (20 meters) to prevent fraudulent submissions.",
+        "Surveyor-focused platform with real-time geolocation tracking, map-based monitoring (Leaflet), and 20m proximity validation to ensure reliable and fraud-free data collection in the field.",
       tech: ["Laravel", "MySQL", "Leaflet", "JavaScript"],
       images: {
-        cover: "/survey.png",
+        cover: "survey.jpg",
         desktop: "/survey-desktop.png",
         mobile: "/survey-mobile.png",
       },
@@ -43,7 +43,7 @@ export default function Projects() {
         "Content management system for news publishing with a structured approval workflow. Supports multiple roles including reporters, editors, and administrators, enabling content creation, validation, and controlled publication processes.",
       tech: ["Laravel", "Vite", "TailwindCSS", "MySQL"],
       images: {
-        cover: "/news.png",
+        cover: "news.jpg",
         desktop: "/news-desktop.png",
         mobile: "/news-mobile.png",
       },
@@ -57,7 +57,7 @@ export default function Projects() {
         "Application inspired by Gmail that leverages Large Language Models to automatically classify emails. Built with a FastAPI backend, Redis caching for performance, Docker-based containerization, and a React frontend. Focused on scalability and intelligent automation.",
       tech: ["React", "FastAPI", "Redis", "Docker", "LLMs"],
       images: {
-        cover: "/ai-mail.png",
+        cover: "sumamail.jpg",
         desktop: "/ai-mail-desktop.png",
         mobile: "/ai-mail-mobile.png",
       },
@@ -71,7 +71,7 @@ export default function Projects() {
         "Full-stack e-commerce platform developed based on a real-world tech business scenario. Includes product catalog, category filtering, shopping cart functionality, secure authentication using JWT, and PayPal payment integration. Focused on business logic, security, and user experience.",
       tech: ["React", "Node.js", "Express", "MySQL", "JWT", "PayPal API"],
       images: {
-        cover: "/ecommerce.png",
+        cover: "ecommerce.jpg",
         desktop: "/ecommerce-desktop.png",
         mobile: "/ecommerce-mobile.png",
       },
@@ -81,11 +81,14 @@ export default function Projects() {
   return (
     <section className="py-24 px-8 max-w-7xl mx-auto" id="projects">
       {/* HEADER */}
-      <div className="mb-16">
+      <div className="mb-10">
         <h2 className="text-4xl font-extrabold text-primary-container mb-4">
           Featured Projects
         </h2>
-        <p className="text-on-surface-variant">Selected real-world work</p>
+        <p className="text-on-surface-variant">
+          Real-world applications focused on scalability, performance, and user
+          experience
+        </p>
       </div>
 
       {/* GRID */}
