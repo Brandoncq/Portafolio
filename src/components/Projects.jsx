@@ -8,18 +8,17 @@ export default function Projects() {
   const [openModal, setOpenModal] = useState(false);
   const projects = [
     {
-      name: "TamaTacna",
-      client: "Research Program - University",
-      description: "Interactive tourism platform with maps and routes",
+      name: "News Management System",
+      client: "DEC S.A.C.",
+      description: "Editorial workflow with role-based access",
       details:
-        "Web and mobile application designed to promote tourism in Tacna through the visualization of historical locations. Features interactive maps, custom route generation similar to Google Maps, multimedia content including images and 360° videos, and optimized asset storage for performance.",
-      tech: ["Next.js", "PostgreSQL", "Mapbox", "React Native"],
+        "Content management system for news publishing with a structured approval workflow. Supports multiple roles including reporters, editors, and administrators, enabling content creation, validation, and controlled publication processes.",
+      tech: ["Laravel", "Vite", "TailwindCSS", "MySQL"],
       images: {
-        cover: "tamatacna.jpg",
-        desktop: "/tamatacna-desktop.png",
-        mobile: "/tamatacna-mobile.png",
+        cover: "news.jpg",
+        desktop: "news_desktop.png",
+        mobile: "news_mobile.png",
       },
-      live: "https://play.google.com/store/apps/details?id=com.silverhunk.tamatacnaguia",
     },
     {
       name: "Survey Management System",
@@ -30,24 +29,38 @@ export default function Projects() {
       tech: ["Laravel", "MySQL", "Leaflet", "JavaScript"],
       images: {
         cover: "survey.jpg",
-        desktop: "/survey-desktop.png",
-        mobile: "/survey-mobile.png",
+        desktop: "survey_desktop.png",
+        mobile: "survey_mobile.png",
       },
-      repo: "https://github.com/...",
     },
     {
-      name: "News Management System",
-      client: "DEC S.A.C.",
-      description: "Editorial workflow with role-based access",
+      name: "TamaTacna",
+      client: "Research Program - University",
+      description: "Interactive tourism platform with maps and routes",
       details:
-        "Content management system for news publishing with a structured approval workflow. Supports multiple roles including reporters, editors, and administrators, enabling content creation, validation, and controlled publication processes.",
-      tech: ["Laravel", "Vite", "TailwindCSS", "MySQL"],
+        "Web and mobile application designed to promote tourism in Tacna through the visualization of historical locations. Features interactive maps, custom route generation similar to Google Maps, multimedia content including images and 360° videos, and optimized asset storage for performance.",
+      tech: ["Next.js", "PostgreSQL", "Mapbox", "React Native"],
       images: {
-        cover: "news.jpg",
-        desktop: "/news-desktop.png",
-        mobile: "/news-mobile.png",
+        cover: "tamatacna.jpg",
+        desktop: "tamatacna_desktop.png",
+        mobile: "tamatacna_mobile.png",
       },
-      repo: "https://github.com/...",
+      live: "https://play.google.com/store/apps/details?id=com.silverhunk.tamatacnaguia",
+    },
+
+    {
+      name: "Tech E-commerce Platform",
+      client: "Academic Project",
+      description: "Online store with payments and authentication",
+      details:
+        "Full-stack e-commerce platform developed based on a real-world tech business scenario. Includes product catalog, category filtering, shopping cart functionality, secure authentication using JWT, and PayPal payment integration. Focused on business logic, security, and user experience.",
+      tech: ["React", "Node.js", "Express", "MySQL", "JWT", "PayPal API"],
+      images: {
+        cover: "ecommerce.jpg",
+        desktop: "ecommerce_desktop.png",
+        mobile: "ecommerce_mobile.png",
+      },
+      repo: "https://ecomerce-five-lilac.vercel.app",
     },
     {
       name: "AI Email Classifier",
@@ -58,24 +71,10 @@ export default function Projects() {
       tech: ["React", "FastAPI", "Redis", "Docker", "LLMs"],
       images: {
         cover: "sumamail.jpg",
-        desktop: "/ai-mail-desktop.png",
-        mobile: "/ai-mail-mobile.png",
+        desktop: "mail_desktop.png",
+        mobile: "mail_mobile.png",
       },
-      repo: "https://github.com/...",
-    },
-    {
-      name: "Tech E-commerce Platform",
-      client: "Academic Project",
-      description: "Online store with payments and authentication",
-      details:
-        "Full-stack e-commerce platform developed based on a real-world tech business scenario. Includes product catalog, category filtering, shopping cart functionality, secure authentication using JWT, and PayPal payment integration. Focused on business logic, security, and user experience.",
-      tech: ["React", "Node.js", "Express", "MySQL", "JWT", "PayPal API"],
-      images: {
-        cover: "ecommerce.jpg",
-        desktop: "/ecommerce-desktop.png",
-        mobile: "/ecommerce-mobile.png",
-      },
-      repo: "https://ecomerce-five-lilac.vercel.app",
+      //repo: "https://github.com/...",
     },
   ];
   return (

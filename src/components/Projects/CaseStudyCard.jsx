@@ -170,7 +170,7 @@ const CaseStudyCard = ({
                 <div className="aspect-video overflow-hidden">
                   <img
                     src={displayProject.images.desktop}
-                    className="w-full h-full object-cover"
+                    className="w-full h-full object-cover select-none"
                   />
                 </div>
               </div>
@@ -180,11 +180,18 @@ const CaseStudyCard = ({
 
             {/* phone */}
             <div className="absolute -bottom-4 -left-2 sm:-left-4 lg:-bottom-6 lg:-left-6 w-24 sm:w-28 lg:w-32">
-              <div className="bg-white p-1.5 sm:p-2 rounded-3xl shadow-xl">
-                <div className="aspect-[9/19] overflow-hidden rounded-2xl">
+              <div className="bg-zinc-200 p-1.5 sm:p-2 rounded-3xl shadow-xl">
+                <div className="relative aspect-[9/19] overflow-hidden rounded-2xl bg-black">
+                  {/* NOTCH / ISLA */}
+                  <div className="absolute top-1 left-1/2 -translate-x-1/2 w-10 h-2 bg-black rounded-full z-10"></div>
+
+                  {/* SPEAKER (opcional más detalle) */}
+                  <div className="absolute top-[6px] left-1/2 -translate-x-1/2 w-4 h-[2px] bg-gray-700 rounded-full z-10"></div>
+
+                  {/* SCREEN */}
                   <img
                     src={displayProject.images.mobile}
-                    className="w-full h-full object-cover"
+                    className="w-full h-full object-cover select-none"
                   />
                 </div>
               </div>
