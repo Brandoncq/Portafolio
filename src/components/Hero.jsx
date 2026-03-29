@@ -14,7 +14,7 @@ export default function Hero() {
 
       <div className="relative z-10 max-w-7xl h-full flex flex-col justify-center lg:px-16">
         <div>
-          <span className="inline-block py-1 px-3 bg-secondary-container rounded-full text-xs font-bold mb-6">
+          <span className="inline-block py-1 px-3 bg-secondary-container rounded-full text-xs font-bold mb-6 select-none">
             Available for Projects
           </span>
         </div>
@@ -37,7 +37,9 @@ export default function Hero() {
             href="mailto:brandoncq036@hotmail.com"
             className="flex items-center gap-2 bg-primary-container text-on-primary px-8 py-4 rounded-lg font-bold text-lg hover:shadow-xl transition-all active:scale-95 ease-in-out duration-300"
           >
-            <span className="material-symbols-outlined">mail</span>
+            <span translate="no" className="material-symbols-outlined">
+              mail
+            </span>
             Email Me
           </a>
           <a
