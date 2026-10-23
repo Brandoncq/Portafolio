@@ -10,9 +10,11 @@ export default function Projects() {
     {
       name: "News Management System",
       client: "DEC S.A.C.",
-      description: "Editorial workflow with role-based access",
+      description: "Role-based editorial workflow for controlled publishing",
       details:
-        "Content management system for news publishing with a structured approval workflow. Supports multiple roles including reporters, editors, and administrators, enabling content creation, validation, and controlled publication processes.",
+        "Designed and implemented a content management system with a structured approval workflow. Enabled role-based access (reporters, editors, admins) to ensure controlled publishing, reduce content errors, and improve editorial efficiency.",
+      impact:
+        "Improved editorial workflow efficiency and reduced content publishing errors through role-based validation and approval processes.",
       tech: ["Laravel", "Vite", "TailwindCSS", "MySQL"],
       images: {
         cover: "news.jpg",
@@ -23,9 +25,11 @@ export default function Projects() {
     {
       name: "Survey Management System",
       client: "DEC S.A.C.",
-      description: "Geo-based control and anti-fraud validation",
+      description: "Real-time geolocation tracking with anti-fraud validation",
       details:
-        "Surveyor-focused platform with real-time geolocation tracking, map-based monitoring (Leaflet), and 20m proximity validation to ensure reliable and fraud-free data collection in the field.",
+        "Built a field data collection platform with real-time geolocation tracking and map-based monitoring using Leaflet. Implemented proximity validation (20m radius) to prevent fraudulent submissions and ensure data accuracy in distributed environments.",
+      impact:
+        "Reduced fraudulent survey submissions and increased data reliability by enforcing geolocation-based validation in field operations.",
       tech: ["Laravel", "MySQL", "Leaflet", "JavaScript"],
       images: {
         cover: "survey.jpg",
@@ -36,9 +40,11 @@ export default function Projects() {
     {
       name: "TamaTacna",
       client: "Research Program - University",
-      description: "Interactive tourism platform with maps and routes",
+      description: "Tourism platform with dynamic maps and route generation",
       details:
-        "Web and mobile application designed to promote tourism in Tacna through the visualization of historical locations. Features interactive maps, custom route generation similar to Google Maps, multimedia content including images and 360° videos, and optimized asset storage for performance.",
+        "Developed a web and mobile tourism platform featuring interactive maps and dynamic route generation. Optimized media delivery (images and 360° content) and backend performance to ensure smooth user experience across devices.",
+      impact:
+        "Enhanced user experience and engagement by delivering optimized multimedia content and efficient route generation across web and mobile platforms.",
       tech: ["Next.js", "PostgreSQL", "Mapbox", "React Native"],
       images: {
         cover: "tamatacna.jpg",
@@ -47,13 +53,14 @@ export default function Projects() {
       },
       live: "https://play.google.com/store/apps/details?id=com.silverhunk.tamatacnaguia",
     },
-
     {
       name: "Tech E-commerce Platform",
       client: "Academic Project",
-      description: "Online store with payments and authentication",
+      description: "Full-stack e-commerce with secure payments",
       details:
-        "Full-stack e-commerce platform developed based on a real-world tech business scenario. Includes product catalog, category filtering, shopping cart functionality, secure authentication using JWT, and PayPal payment integration. Focused on business logic, security, and user experience.",
+        "Built a full-stack e-commerce platform with secure authentication (JWT) and PayPal integration. Designed core business logic including product management, cart functionality, and transaction handling, focusing on security and scalability.",
+      impact:
+        "Implemented secure payment processing and authentication flows, improving transaction reliability and protecting user data.",
       tech: ["React", "Node.js", "Express", "MySQL", "JWT", "PayPal API"],
       images: {
         cover: "ecommerce.jpg",
@@ -65,48 +72,63 @@ export default function Projects() {
     {
       name: "AI Email Classifier",
       client: "Personal Project",
-      description: "Intelligent email classification using LLMs",
+      description: "LLM-based email classification system",
       details:
-        "Application inspired by Gmail that leverages Large Language Models to automatically classify emails. Built with a FastAPI backend, Redis caching for performance, Docker-based containerization, and a React frontend. Focused on scalability and intelligent automation.",
+        "Developed an intelligent email classification system using Large Language Models. Implemented a FastAPI backend with Redis caching to reduce response times, and containerized the application using Docker for scalable deployment.",
+      impact:
+        "Reduced email processing time and improved classification efficiency through LLM-based automation and caching strategies.",
       tech: ["React", "FastAPI", "Redis", "Docker", "LLMs"],
       images: {
         cover: "sumamail.jpg",
         desktop: "mail_desktop.png",
         mobile: "mail_mobile.png",
       },
-      //repo: "https://github.com/...",
     },
   ];
   return (
-    <section className="py-24 px-8 max-w-7xl mx-auto" id="projects">
-      {/* HEADER */}
-      <div className="mb-10">
-        <h2 className="text-4xl font-extrabold text-primary-container mb-4">
-          Featured Projects
-        </h2>
-        <p className="text-on-surface-variant">
-          Real-world applications focused on scalability, performance, and user
-          experience
-        </p>
-      </div>
+    <section className="relative py-24 md:py-28" id="projects">
+      <div className="mx-auto max-w-7xl px-4 sm:px-8">
+        <div className="mb-12 flex flex-col gap-8 md:flex-row md:items-end md:justify-between">
+          <div className="max-w-2xl">
+            <div className="flex items-center gap-3 text-[10px] font-bold uppercase tracking-[0.25em] text-outline">
+              <span className="h-px w-10 bg-primary-container" />
+              Selected Work
+            </div>
+            <h2 className="mt-4 text-4xl font-extrabold tracking-tight text-primary-container md:text-5xl">
+              Featured Projects
+            </h2>
+            <p className="mt-4 text-base leading-relaxed text-on-surface-variant md:text-lg">
+              Real-world applications focused on scalability, performance, and
+              user experience.
+            </p>
+          </div>
 
-      {/* GRID */}
-      <div className="w-full">
+          <div className="flex items-center gap-4 md:pb-1">
+            <span className="text-[10px] font-bold uppercase tracking-[0.22em] text-outline">
+              {String(projects.length).padStart(2, "0")} Projects
+            </span>
+            <span className="hidden h-8 w-px bg-outline-variant/40 md:block" />
+            <span className="hidden text-[10px] font-bold uppercase tracking-[0.22em] text-outline md:block">
+              2024 — 2026
+            </span>
+          </div>
+        </div>
+
         <ProjectsCarousel
           projects={projects}
           onSelect={(project) => setSelectedProject(project)}
           setOpenModal={setOpenModal}
+          isModalOpen={openModal}
         />
       </div>
 
-      {/* 🔥 TU MODAL */}
       <Modal
         isOpen={openModal}
         onClose={() => {
           setSelectedProject(null);
           setOpenModal(false);
         }}
-        className="w-[100%] lg:h-[100%] h-lvh bg-white"
+        className="h-lvh w-full overflow-hidden bg-surface lg:h-full"
         hideCloseButton={true}
       >
         {selectedProject && (

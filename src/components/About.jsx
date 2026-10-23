@@ -16,10 +16,11 @@ export default function About() {
             </div>
             <div>
               <p className="text-xl text-on-surface-variant leading-relaxed font-body">
-                Software developer focused on building scalable and reliable
-                systems. Experience working across backend services, mobile
-                applications, and cloud infrastructure, with a strong emphasis
-                on performance, stability, and real-world problem solving.
+                Full Stack Developer with experience building and maintaining
+                production-grade systems, including backend services, real-time
+                applications, and high-concurrency environments. Focused on
+                performance optimization, system stability, and scalable
+                architecture.
               </p>
             </div>
             <div className="space-y-6">
@@ -75,9 +76,11 @@ export default function About() {
                 </div>
 
                 <p className="text-on-surface-variant leading-relaxed mb-6">
-                  Working on enterprise systems across SAP, mobile apps, and
-                  backend services. Focused on debugging, improving stability,
-                  and maintaining production-level applications.
+                  Maintaining and optimizing production-grade enterprise systems
+                  integrating backend services, mobile applications, and SAP.
+                  Focused on identifying and resolving critical issues,
+                  improving system stability, and ensuring reliable performance
+                  in live environments.
                 </p>
 
                 <div className="flex flex-wrap gap-3">
@@ -110,8 +113,11 @@ export default function About() {
                   </p>
                 </div>
                 <p className="text-on-surface-variant leading-relaxed mb-6">
-                  Leading the development of high-concurrency business systems.
-                  Managed 1000+ business records with optimized data structures.
+                  Designed and developed backend systems for high-concurrency
+                  environments. Optimized data processing for 1000+ business
+                  records and implemented real-time communication using
+                  WebSockets, ensuring performance and reliability under
+                  real-world usage.
                 </p>
                 <div className="flex flex-wrap gap-3">
                   <span className="text-xs font-bold bg-surface-container-high px-3 py-1.5 rounded-full">
@@ -141,9 +147,10 @@ export default function About() {
                   </p>
                 </div>
                 <p className="text-on-surface-variant leading-relaxed mb-6">
-                  Focused on performance engineering and modernizing frontend
-                  architecture. Significant improvements in page load speeds and
-                  SEO rankings.
+                  Improved frontend performance and modernized application
+                  architecture using Next.js. Reduced page load times and
+                  enhanced SEO performance, delivering a faster and more
+                  scalable user experience.
                 </p>
                 <div className="flex flex-wrap gap-3">
                   <span className="text-xs font-bold bg-surface-container-high px-3 py-1.5 rounded-full">

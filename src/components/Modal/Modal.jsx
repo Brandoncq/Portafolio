@@ -58,7 +58,7 @@ const Modal = ({
     >
       <div
         ref={modalRef}
-        className={`bg-white shadow-lg dark:shadow-md dark:shadow-zinc-700 relative transform transition-all duration-300 ease-out overflow-auto ${
+        className={`bg-white shadow-lg dark:shadow-md dark:shadow-zinc-700 relative transform transition-all duration-300 ease-out overflow-hidden ${
           className ?? "w-[90%] h-[90%]"
         }`}
         style={{

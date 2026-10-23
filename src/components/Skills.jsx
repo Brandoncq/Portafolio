@@ -1,73 +1,119 @@
 export default function Skills() {
-  const categories = [
+  const capabilities = [
     {
-      title: "Frontend",
-      skills: ["React", "Next.js", "Tailwind CSS"],
+      title: "Backend & data",
+      description:
+        "APIs, data models and business logic designed to stay clear as the product grows.",
+      tools: ["Node.js", "Laravel", "PostgreSQL", "Redis"],
     },
     {
-      title: "Backend",
-      skills: ["Node.js", "Laravel (PHP)", "Python"],
+      title: "Real-time systems",
+      description:
+        "Live updates, geolocation and high-concurrency flows that hold up under real usage.",
+      tools: ["WebSockets", "Redis", "Leaflet"],
     },
     {
-      title: "Mobile",
-      skills: ["React Native (Expo)", "Flutter"],
+      title: "Product interfaces",
+      description:
+        "Web and mobile experiences built for speed, clarity and everyday use.",
+      tools: ["React", "Next.js", "React Native", "Flutter"],
     },
     {
-      title: "Databases",
-      skills: ["PostgreSQL", "MySQL", "SQLite", "Redis"],
-    },
-    {
-      title: "Cloud & DevOps",
-      skills: ["AWS (EC2, S3)", "Docker", "Linux", "Nginx"],
+      title: "Cloud & delivery",
+      description:
+        "Deployment and operations with a focus on stability, observability and uptime.",
+      tools: ["AWS", "Docker", "Linux", "Nginx"],
     },
     {
       title: "Integrations",
-      skills: [
-        "REST APIs",
-        "WebSockets",
-        "OAuth 2.0",
-        "Google Maps",
-        "Mapbox",
-        "PayPal API",
-      ],
+      description:
+        "Payments, maps, authentication and third-party services connected without friction.",
+      tools: ["REST APIs", "OAuth 2.0", "PayPal", "Mapbox"],
     },
   ];
 
+  const principles = [
+    "Clarity over complexity",
+    "Performance by design",
+    "Ownership from start to finish",
+  ];
+
   return (
-    <section className="py-24 bg-slate-950" id="skills">
-      <div className="max-w-7xl mx-auto px-8">
-        <div className="text-center mb-16">
-          <h2 className="text-5xl font-extrabold tracking-tighter mb-4 text-white">
-            Tech Stack
+    <section
+      className="relative overflow-hidden bg-slate-950 px-4 py-24 sm:px-8 md:py-28"
+      id="skills"
+    >
+      <div
+        className="pointer-events-none absolute inset-0"
+        style={{
+          backgroundImage:
+            "radial-gradient(circle at 15% 0%, rgba(175,200,240,0.12), transparent 45%)",
+        }}
+      />
+
+      <div className="relative mx-auto grid max-w-7xl gap-14 lg:grid-cols-12 lg:gap-20">
+        <div className="lg:col-span-5 lg:sticky lg:top-28 lg:self-start">
+          <div className="flex items-center gap-3 text-[10px] font-bold uppercase tracking-[0.28em] text-[#afc8f0]/70">
+            <span className="h-px w-8 bg-[#afc8f0]/40" />
+            Capabilities
+          </div>
+
+          <h2 className="mt-5 text-4xl font-extrabold leading-tight tracking-tight text-white md:text-5xl">
+            What I bring to a project
           </h2>
-          <p className="text-lg max-w-2xl mx-auto text-[#afc8f0]">
-            Technologies I use to design, build and scale production-ready
-            systems.
+
+          <p className="mt-6 max-w-md text-base leading-relaxed text-slate-400 md:text-lg">
+            I don't start with a list of tools. I start with the problem, then
+            choose what keeps the system simple, fast and maintainable.
           </p>
+
+          <p className="mt-4 max-w-md text-base leading-relaxed text-slate-400 md:text-lg">
+            The result is software that does its job quietly — and keeps doing
+            it as the business changes.
+          </p>
+
+          <ul className="mt-9 space-y-3">
+            {principles.map((principle) => (
+              <li
+                key={principle}
+                className="flex items-center gap-3 text-sm font-medium text-slate-300"
+              >
+                <span className="grid h-5 w-5 place-items-center rounded-full bg-white/5 ring-1 ring-white/10">
+                  <span className="material-symbols-outlined text-[13px] text-[#afc8f0]">
+                    check
+                  </span>
+                </span>
+                {principle}
+              </li>
+            ))}
+          </ul>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {categories.map((category, index) => (
-            <div
-              key={index}
-              className="p-8 bg-slate-900/90 border border-white/10 rounded-2xl"
-            >
-              <h3 className="text-lg font-bold text-white mb-4">
-                {category.title}
-              </h3>
+        <div className="lg:col-span-7">
+          <div className="divide-y divide-white/10 border-y border-white/10">
+            {capabilities.map((capability, index) => (
+              <div
+                key={capability.title}
+                className="group flex gap-5 py-6 sm:gap-8 sm:py-7"
+              >
+                <span className="pt-1 text-[11px] font-bold tabular-nums tracking-[0.15em] text-[#afc8f0]/50 transition-colors duration-300 group-hover:text-[#afc8f0]">
+                  {String(index + 1).padStart(2, "0")}
+                </span>
 
-              <div className="flex flex-wrap gap-2">
-                {category.skills.map((skill, i) => (
-                  <span
-                    key={i}
-                    className="text-sm font-bold bg-slate-800 px-3 py-1.5 rounded-full text-[#afc8f0]"
-                  >
-                    {skill}
-                  </span>
-                ))}
+                <div className="flex-1">
+                  <h3 className="text-lg font-bold text-white transition-colors duration-300 sm:text-xl">
+                    {capability.title}
+                  </h3>
+                  <p className="mt-1.5 max-w-lg text-sm leading-relaxed text-slate-400 sm:text-[15px]">
+                    {capability.description}
+                  </p>
+                  <p className="mt-3 text-[10px] font-semibold uppercase tracking-[0.16em] text-slate-500">
+                    {capability.tools.join(" · ")}
+                  </p>
+                </div>
               </div>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
       </div>
     </section>
